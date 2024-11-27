@@ -106,7 +106,7 @@ $$P(A \cap B) = P(A) \cdot P(B)$$
 Deux événements$A$et$B$sont dits indépendants si la probabilité qu'ils se produisent ensemble est égale au produit de leurs probabilités individuelles. Cela signifie que l'occurrence de l'un n'affecte pas l'autre.
 
 **Exemple** :  
-Dans un jeu de stratégie impliquant des dés, si vous lancez deux dés, la probabilité d'obtenir un 6 sur le premier dé ($A$) et un 5 sur le second dé ($B$) est :$P(A \cap B) = P(A) \cdot P(B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
+Dans un jeu de stratégie impliquant des dés, si vous lancez deux dés, la probabilité d'obtenir un 6 sur le premier dé ( $A$ ) et un 5 sur le second dé ( $B$ ) est :$P(A \cap B) = P(A) \cdot P(B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
 **Attention** :  
 Si les événements sont dépendants, comme tirer deux cartes consécutives d’un jeu sans remise, la formule ci-dessus ne s’applique pas. Les probabilités doivent être ajustées en tenant compte de la dépendance.
 
@@ -126,7 +126,7 @@ La probabilité du complémentaire$A^c$d'un événement$A$correspond à la proba
 **Exemple** :  
 Dans un lancer de dé, la probabilité de ne pas obtenir un 6 est :$P(\text{Pas 6}) = 1 - P(6) = 1 - \frac{1}{6} = \frac{5}{6}$
 **Utilisation dans les jeux de stratégie** :  
-Cela permet de déterminer les chances d'échec d'une action. Par exemple, si un joueur estime qu'il a 70 % de chances de réussir une attaque ($P(\text{Réussite}) = 0.7$), alors ses chances d’échouer sont :$P(\text{Échec}) = 1 - 0.7 = 0.3$
+Cela permet de déterminer les chances d'échec d'une action. Par exemple, si un joueur estime qu'il a 70 % de chances de réussir une attaque ( $P(\text{Réussite}) = 0.7$ ), alors ses chances d’échouer sont :$P(\text{Échec}) = 1 - 0.7 = 0.3$
 
 ---
 
@@ -138,18 +138,18 @@ Dans les jeux, notamment ceux impliquant des choix stratégiques, l’utilisatio
 
 ### **Loi binomiale**
 
-**Formule** :$P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$
+**Formule** : $P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}$
 
--$n$: Nombre total d’essais (ou actions).
--$k$: Nombre de succès souhaités.
--$p$: Probabilité de succès pour un essai donné.
--$\binom{n}{k}$: Nombre de combinaisons possibles, donné par$\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$.
+- $n$ : Nombre total d’essais (ou actions).
+- $k$ : Nombre de succès souhaités.
+- $p$ : Probabilité de succès pour un essai donné.
+- $\binom{n}{k}$ : Nombre de combinaisons possibles, donné par$\binom{n}{k} = \frac{n!}{k! \cdot (n-k)!}$.
 
 **Explication** :  
-La loi binomiale s'applique lorsque nous avons une séquence de$n$essais indépendants, chaque essai ayant deux issues possibles : succès ou échec. La probabilité$P(X = k)$indique la probabilité d'obtenir exactement$k$succès.
+La loi binomiale s'applique lorsque nous avons une séquence de $n$essais indépendants, chaque essai ayant deux issues possibles : succès ou échec. La probabilité$P(X = k)$indique la probabilité d'obtenir exactement$k$succès.
 
 **Exemple** :  
-Dans un jeu où un joueur a 60 % de chances ($p = 0.6$) de réussir une action, et où il tente 5 actions ($n = 5$), la probabilité de réussir exactement 3 fois ($k = 3$) est donnée par :$P(X = 3) = \binom{5}{3} (0.6)^3 (0.4)^2 = 10 \cdot 0.216 \cdot 0.16 = 0.3456$
+Dans un jeu où un joueur a 60 % de chances ( $p = 0.6$ ) de réussir une action, et où il tente 5 actions ( $n = 5$ ), la probabilité de réussir exactement 3 fois ( $k = 3$ ) est donnée par :$P(X = 3) = \binom{5}{3} (0.6)^3 (0.4)^2 = 10 \cdot 0.216 \cdot 0.16 = 0.3456$
 **Application dans les jeux** :  
 Cette loi est utile pour évaluer les stratégies reposant sur des actions répétées, comme le nombre d’attaques réussies ou la probabilité de remporter un certain nombre de manches.
 
@@ -157,16 +157,16 @@ Cette loi est utile pour évaluer les stratégies reposant sur des actions rép�
 
 ### **Loi de Poisson**
 
-**Formule** :$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$
+**Formule** : $P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$
 
--$\lambda$: Moyenne ou intensité du phénomène (nombre moyen d’événements dans un intervalle donné).
--$k$: Nombre d’occurrences.
+- $\lambda$ : Moyenne ou intensité du phénomène (nombre moyen d’événements dans un intervalle donné).
+- $k$ : Nombre d’occurrences.
 
 **Explication** :  
 La loi de Poisson s'applique aux événements rares sur un intervalle de temps ou d’espace. Elle modélise la probabilité d'observer exactement$k$occurrences lorsque la moyenne des occurrences est$\lambda$.
 
 **Exemple** :  
-Dans un jeu de stratégie, supposons qu’un joueur subisse en moyenne 2 attaques par tour ($\lambda = 2$). La probabilité qu’il subisse exactement 3 attaques lors d’un tour est :$P(X = 3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \cdot 0.1353}{6} = 0.1804$
+Dans un jeu de stratégie, supposons qu’un joueur subisse en moyenne 2 attaques par tour ( $\lambda = 2$ ). La probabilité qu’il subisse exactement 3 attaques lors d’un tour est :$P(X = 3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \cdot 0.1353}{6} = 0.1804$
 **Application dans les jeux** :  
 La loi de Poisson aide à évaluer les risques d’événements rares, comme des attaques critiques, ou des scénarios inhabituels mais potentiellement dangereux.
 
@@ -174,12 +174,12 @@ La loi de Poisson aide à évaluer les risques d’événements rares, comme des
 
 ### **Espérance mathématique**
 
-**Formule** :$E(X) = \sum\_{x} x \cdot P(X = x)$
+**Formule** : $E(X) = \sum\_{x} x \cdot P(X = x)$
 **Explication** :  
 L'espérance mathématique est la moyenne pondérée des résultats possibles, où chaque résultat est multiplié par sa probabilité. Elle représente la valeur moyenne attendue d'une variable aléatoire après de nombreuses répétitions.
 
 **Exemple** :  
-Dans un jeu, un joueur tire au hasard une carte parmi trois cartes marquées$1, 2, 5$. Si chaque carte a une probabilité égale ($P(X=x) = \frac{1}{3}$), l’espérance des gains est :$E(X) = 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3} + 5 \cdot \frac{1}{3} = \frac{1 + 2 + 5}{3} = 2.67$
+Dans un jeu, un joueur tire au hasard une carte parmi trois cartes marquées$1, 2, 5$. Si chaque carte a une probabilité égale ( $P(X=x) = \frac{1}{3}$ ), l’espérance des gains est :$E(X) = 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3} + 5 \cdot \frac{1}{3} = \frac{1 + 2 + 5}{3} = 2.67$
 **Application dans les jeux** :  
 L'espérance permet d'évaluer la rentabilité ou le risque moyen d’une stratégie, comme les gains espérés dans une série de paris.
 
@@ -193,11 +193,11 @@ Les statistiques descriptives permettent de résumer, analyser et interpréter u
 
 ### **Moyenne**
 
-**Formule** :$\bar{x} = \frac{1}{n} \sum\_{i=1}^n x_i$
+**Formule** : $\bar{x} = \frac{1}{n} \sum\_{i=1}^n x_i$
 
--$\bar{x}$: Moyenne des données.
--$n$: Nombre total de données.
--$x_i$: Valeurs individuelles dans l’ensemble des données.
+- $\bar{x}$ : Moyenne des données.
+- $n$ : Nombre total de données.
+- $x_i$ : Valeurs individuelles dans l’ensemble des données.
 
 **Explication** :  
 La moyenne représente la valeur centrale ou typique d’un ensemble de données. Elle est obtenue en additionnant toutes les valeurs puis en divisant par le nombre total d’observations.
@@ -226,18 +226,18 @@ La médiane est utile pour identifier une "performance typique" lorsqu'il y a de
 
 ### **Écart-type**
 
-**Formule** :$\sigma = \sqrt{\frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})^2}$
+**Formule** : $\sigma = \sqrt{\frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})^2}$
 
--$\sigma$: Écart-type (mesure de dispersion).
--$\bar{x}$: Moyenne des données.
--$x_i$: Valeurs individuelles.
--$n$: Nombre total de données.
+- $\sigma$ : Écart-type (mesure de dispersion).
+- $\bar{x}$ : Moyenne des données.
+- $x_i$ : Valeurs individuelles.
+- $n$ : Nombre total de données.
 
 **Explication** :  
 L’écart-type mesure la dispersion ou la variabilité des données autour de la moyenne. Un écart-type faible indique que les données sont regroupées près de la moyenne, tandis qu’un écart-type élevé signale une grande variation.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$:$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
+Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ :$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
 = \sqrt{\frac{100 + 25 + 0 + 25 + 100}{5}} = 7.07$
 **Application dans les jeux** :  
 L’écart-type aide à évaluer la stabilité des performances. Par exemple, dans un jeu compétitif, un joueur avec un faible écart-type est plus régulier.
@@ -246,11 +246,11 @@ L’écart-type aide à évaluer la stabilité des performances. Par exemple, da
 
 ### **Loi normale**
 
-**Formule** :$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$
+**Formule** : $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$
 
--$\mu$: Moyenne.
--$\sigma$: Écart-type.
--$x$: Valeur d’intérêt.
+- $\mu$ : Moyenne.
+- $\sigma$ : Écart-type.
+- $x$ : Valeur d’intérêt.
 
 **Explication** :  
 La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres :$\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
@@ -271,11 +271,11 @@ Les statistiques descriptives permettent de résumer, analyser et interpréter u
 
 ### **Moyenne**
 
-**Formule** :$\bar{x} = \frac{1}{n} \sum\_{i=1}^n x_i$
+**Formule** : $\bar{x} = \frac{1}{n} \sum\_{i=1}^n x_i$
 
--$\bar{x}$: Moyenne des données.
--$n$: Nombre total de données.
--$x_i$: Valeurs individuelles dans l’ensemble des données.
+- $\bar{x}$ : Moyenne des données.
+- $n$ : Nombre total de données.
+- $x_i$ : Valeurs individuelles dans l’ensemble des données.
 
 **Explication** :  
 La moyenne représente la valeur centrale ou typique d’un ensemble de données. Elle est obtenue en additionnant toutes les valeurs puis en divisant par le nombre total d’observations.
@@ -304,18 +304,18 @@ La médiane est utile pour identifier une "performance typique" lorsqu'il y a de
 
 ### **Écart-type**
 
-**Formule** :$\sigma = \sqrt{\frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})^2}$
+**Formule** : $\sigma = \sqrt{\frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})^2}$
 
--$\sigma$: Écart-type (mesure de dispersion).
--$\bar{x}$: Moyenne des données.
--$x_i$: Valeurs individuelles.
--$n$: Nombre total de données.
+- $\sigma$ : Écart-type (mesure de dispersion).
+- $\bar{x}$ : Moyenne des données.
+- $x_i$ : Valeurs individuelles.
+- $n$ : Nombre total de données.
 
 **Explication** :  
 L’écart-type mesure la dispersion ou la variabilité des données autour de la moyenne. Un écart-type faible indique que les données sont regroupées près de la moyenne, tandis qu’un écart-type élevé signale une grande variation.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$:$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
+Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ :$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
 = \sqrt{\frac{100 + 25 + 0 + 25 + 100}{5}} = 7.07$
 **Application dans les jeux** :  
 L’écart-type aide à évaluer la stabilité des performances. Par exemple, dans un jeu compétitif, un joueur avec un faible écart-type est plus régulier.
@@ -324,11 +324,11 @@ L’écart-type aide à évaluer la stabilité des performances. Par exemple, da
 
 ### **Loi normale**
 
-**Formule** :$f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$
+**Formule** : $f(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}$
 
--$\mu$: Moyenne.
--$\sigma$: Écart-type.
--$x$: Valeur d’intérêt.
+- $\mu$ : Moyenne.
+- $\sigma$ : Écart-type.
+- $x$ : Valeur d’intérêt.
 
 **Explication** :  
 La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres :$\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
@@ -349,17 +349,17 @@ L'analyse statistique bivariée permet d'examiner la relation entre deux variabl
 
 ### **Covariance**
 
-**Formule** :$\text{Cov}(X, Y) = \frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
+**Formule** : $\text{Cov}(X, Y) = \frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})(y_i - \bar{y})$
 
--$\text{Cov}(X, Y)$: Covariance entre les variables$X$et$Y$.
--$x_i, y_i$: Valeurs individuelles des variables$X$et$Y$.
--$\bar{x}, \bar{y}$: Moyennes des variables$X$et$Y$.
+- $\text{Cov}(X, Y)$ : Covariance entre les variables$X$et$Y$.
+- $x_i, y_i$ : Valeurs individuelles des variables$X$et$Y$.
+- $\bar{x}, \bar{y}$ : Moyennes des variables$X$et$Y$.
 
 **Explication** :  
-La covariance mesure dans quelle mesure deux variables varient ensemble. Si la covariance est positive,$X$et$Y$tendent à évoluer dans le même sens. Si elle est négative, elles varient dans des sens opposés. Une covariance proche de zéro indique une absence de relation linéaire.
+La covariance mesure dans quelle mesure deux variables varient ensemble. Si la covariance est positive, $X$et$Y$tendent à évoluer dans le même sens. Si elle est négative, elles varient dans des sens opposés. Une covariance proche de zéro indique une absence de relation linéaire.
 
 **Exemple** :  
-Dans un jeu,$X$représente le nombre d'attaques réussies et$Y$le score total. Une covariance positive indique qu'un plus grand nombre d'attaques réussies est associé à un score plus élevé.
+Dans un jeu, $X$représente le nombre d'attaques réussies et$Y$le score total. Une covariance positive indique qu'un plus grand nombre d'attaques réussies est associé à un score plus élevé.
 
 **Application dans les jeux** :  
 Analyser la covariance peut aider à comprendre comment deux aspects d'un jeu sont liés, par exemple, si une meilleure précision augmente la probabilité de victoire.
@@ -368,18 +368,18 @@ Analyser la covariance peut aider à comprendre comment deux aspects d'un jeu so
 
 ### **Coefficient de corrélation**
 
-**Formule** :$r = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}$
+**Formule** : $r = \frac{\text{Cov}(X, Y)}{\sigma_X \sigma_Y}$
 
--$r$: Coefficient de corrélation (entre -1 et 1).
--$\text{Cov}(X, Y)$: Covariance entre$X$et$Y$.
--$\sigma_X, \sigma_Y$: Écart-types des variables$X$et$Y$.
+- $r$ : Coefficient de corrélation (entre -1 et 1).
+- $\text{Cov}(X, Y)$ : Covariance entre$X$et$Y$.
+- $\sigma_X, \sigma_Y$ : Écart-types des variables$X$et$Y$.
 
 **Explication** :  
 Le coefficient de corrélation mesure l'intensité et la direction de la relation linéaire entre deux variables.
 
--$r > 0$: Relation positive (les variables augmentent ensemble).
--$r < 0$: Relation négative (une variable augmente pendant que l’autre diminue).
--$r = 0$: Absence de relation linéaire.  
+- $r > 0$ : Relation positive (les variables augmentent ensemble).
+- $r < 0$ : Relation négative (une variable augmente pendant que l’autre diminue).
+- $r = 0$ : Absence de relation linéaire.  
   Plus$r$est proche de -1 ou 1, plus la relation est forte.
 
 **Exemple** :  
@@ -392,18 +392,18 @@ Le coefficient de corrélation est utile pour quantifier la relation entre les v
 
 ### **Régression linéaire**
 
-**Formule** :$y = ax + b$
+**Formule** : $y = ax + b$
 
--$y$: Variable dépendante.
--$x$: Variable indépendante.
--$a$: Pente de la droite (indique l’effet de$x$sur$y$).
--$b$: Ordonnée à l'origine (valeur de$y$lorsque$x = 0$).
+- $y$ : Variable dépendante.
+- $x$ : Variable indépendante.
+- $a$ : Pente de la droite (indique l’effet de $x$ sur $y$ ).
+- $b$ : Ordonnée à l'origine (valeur de $y$lorsque$x = 0$ ).
 
 **Explication** :  
-La régression linéaire modélise la relation entre deux variables en ajustant une droite de tendance. Elle est utilisée pour prédire les valeurs de$y$en fonction de$x$ou pour quantifier l’impact de$x$sur$y$.
+La régression linéaire modélise la relation entre deux variables en ajustant une droite de tendance. Elle est utilisée pour prédire les valeurs de $y$en fonction de $x$ou pour quantifier l’impact de $x$ sur $y$.
 
 **Exemple** :  
-Dans un jeu,$x$représente l’entraînement d’un joueur en heures, et$y$son score moyen. Une équation$y = 5x + 20$suggère que chaque heure d'entraînement augmente le score moyen de 5 points, avec un score initial de 20 sans entraînement.
+Dans un jeu, $x$représente l’entraînement d’un joueur en heures, et$y$son score moyen. Une équation$y = 5x + 20$suggère que chaque heure d'entraînement augmente le score moyen de 5 points, avec un score initial de 20 sans entraînement.
 
 **Application dans les jeux** :  
 La régression linéaire est utilisée pour :
@@ -425,21 +425,21 @@ La méthode des moindres carrés est une technique fondamentale pour ajuster une
 
 $a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$
 
--$a$: Pente de la droite d’ajustement.
--$x_i, y_i$: Valeurs des observations pour les variables$X$et$Y$.
--$\bar{x}, \bar{y}$: Moyennes des variables$X$et$Y$.
+- $a$ : Pente de la droite d’ajustement.
+- $x_i, y_i$ : Valeurs des observations pour les variables$X$et$Y$.
+- $\bar{x}, \bar{y}$ : Moyennes des variables$X$et$Y$.
 
 #### **Ordonnée à l’origine** :
 
 $b = \bar{y} - a \bar{x}$
 
--$b$: Ordonnée à l’origine, c’est-à-dire la valeur de$y$lorsque$x = 0$.
+- $b$ : Ordonnée à l’origine, c’est-à-dire la valeur de $y$lorsque$x = 0$.
 
 **Explication** :  
-La pente ($a$) indique le taux de variation de la variable$y$par rapport à$x$. Si$a > 0$,$y$augmente avec$x$; si$a < 0$,$y$diminue avec$x$. L’ordonnée à l’origine ($b$) représente la valeur de départ de$y$lorsque$x$est nul.
+La pente ( $a$ ) indique le taux de variation de la variable$y$par rapport à$x$. Si$a > 0$, $y$augmente avec$x$; si$a < 0$, $y$diminue avec$x$. L’ordonnée à l’origine ( $b$ ) représente la valeur de départ de $y$lorsque$x$est nul.
 
 **Exemple** :  
-Dans un jeu,$x$représente le nombre de sessions d’entraînement et$y$le score moyen obtenu. Si$a = 3$et$b = 50$, la relation est donnée par :$y = 3x + 50$Cela signifie que chaque session d'entraînement supplémentaire augmente le score moyen de 3 points, avec un score initial de 50 sans entraînement.
+Dans un jeu, $x$représente le nombre de sessions d’entraînement et$y$le score moyen obtenu. Si$a = 3$et$b = 50$, la relation est donnée par :$y = 3x + 50$Cela signifie que chaque session d'entraînement supplémentaire augmente le score moyen de 3 points, avec un score initial de 50 sans entraînement.
 
 **Application dans les jeux** :  
 La formule est utilisée pour :
@@ -451,15 +451,15 @@ La formule est utilisée pour :
 
 ### **Erreur quadratique moyenne (MSE)**
 
-**Formule** :$MSE = \frac{1}{n} \sum\_{i=1}^n (y_i - \hat{y}\_i)^2$
+**Formule** : $MSE = \frac{1}{n} \sum\_{i=1}^n (y_i - \hat{y}\_i)^2$
 
--$MSE$: Erreur quadratique moyenne.
--$y_i$: Valeurs observées (réelles).
--$\hat{y}\_i$: Valeurs prédites par le modèle.
--$n$: Nombre total de points de données.
+- $MSE$ : Erreur quadratique moyenne.
+- $y_i$ : Valeurs observées (réelles).
+- $\hat{y}\_i$ : Valeurs prédites par le modèle.
+- $n$ : Nombre total de points de données.
 
 **Explication** :  
-Le$MSE$mesure l’erreur globale entre les valeurs prédites ($\hat{y}\_i$) et les valeurs observées ($y_i$). Plus le$MSE$est faible, meilleur est l’ajustement de la droite aux données.
+Le$MSE$mesure l’erreur globale entre les valeurs prédites ( $\hat{y}\_i$ ) et les valeurs observées ( $y_i$ ). Plus le$MSE$est faible, meilleur est l’ajustement de la droite aux données.
 
 **Exemple** :  
 Pour les valeurs observées$y = [20, 25, 30]$et les valeurs prédites$\hat{y} = [22, 24, 29]$, l’erreur quadratique moyenne est calculée comme suit :$MSE = \frac{(20-22)^2 + (25-24)^2 + (30-29)^2}{3} = \frac{4 + 1 + 1}{3} = 2$
@@ -486,17 +486,17 @@ L’estimation des erreurs est essentielle en statistique pour mesurer la fiabil
 
 ### **Erreur standard**
 
-**Formule** :$SE = \frac{\sigma}{\sqrt{n}}$
+**Formule** : $SE = \frac{\sigma}{\sqrt{n}}$
 
--$SE$: Erreur standard.
--$\sigma$: Écart-type de l’échantillon.
--$n$: Taille de l’échantillon.
+- $SE$ : Erreur standard.
+- $\sigma$ : Écart-type de l’échantillon.
+- $n$ : Taille de l’échantillon.
 
 **Explication** :  
-L’erreur standard mesure la variabilité de la moyenne d’un échantillon par rapport à la moyenne réelle de la population. Plus l’échantillon est grand ($n$élevé), plus l’erreur standard est faible, ce qui signifie que la moyenne estimée est plus proche de la vraie moyenne.
+L’erreur standard mesure la variabilité de la moyenne d’un échantillon par rapport à la moyenne réelle de la population. Plus l’échantillon est grand ( $n$élevé), plus l’erreur standard est faible, ce qui signifie que la moyenne estimée est plus proche de la vraie moyenne.
 
 **Exemple** :  
-Supposons que dans un jeu, les scores moyens des joueurs ($\bar{x}$) ont un écart-type$\sigma = 10$, et que l'échantillon comprend$n = 25$joueurs. L’erreur standard est :$SE = \frac{10}{\sqrt{25}} = \frac{10}{5} = 2$Cela signifie que la moyenne calculée à partir de cet échantillon a une incertitude de ±2 points.
+Supposons que dans un jeu, les scores moyens des joueurs ( $\bar{x}$ ) ont un écart-type$\sigma = 10$, et que l'échantillon comprend$n = 25$joueurs. L’erreur standard est :$SE = \frac{10}{\sqrt{25}} = \frac{10}{5} = 2$Cela signifie que la moyenne calculée à partir de cet échantillon a une incertitude de ±2 points.
 
 **Application dans les jeux** :  
 L’erreur standard est utilisée pour :
@@ -508,11 +508,11 @@ L’erreur standard est utilisée pour :
 
 ### **Intervalle de confiance (niveau 95%)**
 
-**Formule** :$\text{IC} = \bar{x} \pm 1.96 \cdot SE$
+**Formule** : $\text{IC} = \bar{x} \pm 1.96 \cdot SE$
 
--$\bar{x}$: Moyenne de l’échantillon.
--$1.96$: Coefficient pour un intervalle de confiance à 95 % (provenant de la loi normale).
--$SE$: Erreur standard.
+- $\bar{x}$ : Moyenne de l’échantillon.
+- $1.96$ : Coefficient pour un intervalle de confiance à 95 % (provenant de la loi normale).
+- $SE$ : Erreur standard.
 
 **Explication** :  
 L’intervalle de confiance (IC) donne une plage dans laquelle on estime que la vraie moyenne de la population se trouve avec une certaine probabilité (95 % dans cet exemple). Plus$SE$est faible, plus l’intervalle est étroit, indiquant une estimation précise.
@@ -530,7 +530,7 @@ Si la moyenne des scores des joueurs est$\bar{x} = 50$avec un$SE = 2$, l’inter
 
 1. **Évaluer la précision des estimations** : L’erreur standard aide à comprendre dans quelle mesure une moyenne ou une prédiction est fiable.
 2. **Analyser les performances** : Les intervalles de confiance permettent de comparer les performances des joueurs ou des stratégies avec une certaine assurance.
-3. **Réduire l’incertitude** : En augmentant la taille des échantillons ($n$), on réduit l’erreur standard et affine les prédictions.
+3. **Réduire l’incertitude** : En augmentant la taille des échantillons ( $n$ ), on réduit l’erreur standard et affine les prédictions.
 
 ---
 
@@ -542,11 +542,11 @@ Un test statistique est une méthode permettant de vérifier une hypothèse sur 
 
 ### **Hypothèses**
 
-#### **Hypothèse nulle ($H_0$)** :
+#### **Hypothèse nulle ( $H_0$ )** :
 
 $H_0$représente l’absence d’effet ou de différence. C’est l’hypothèse par défaut que l’on cherche à rejeter.
 
-#### **Hypothèse alternative ($H_1$)** :
+#### **Hypothèse alternative ( $H_1$ )** :
 
 $H_1$est l’hypothèse opposée à$H_0$. Elle suggère qu’il existe un effet ou une différence significative.
 
@@ -556,25 +556,25 @@ Le test statistique consiste à déterminer si les données soutiennent$H_0$ou s
 **Exemple** :  
 Dans un jeu, on teste si une nouvelle stratégie améliore le score moyen.
 
--$H_0$: La stratégie n’a aucun effet ($\mu = 50$, où$50$est le score moyen actuel).
--$H_1$: La stratégie améliore le score ($\mu > 50$).
+- $H_0$ : La stratégie n’a aucun effet ( $\mu = 50$, où$50$est le score moyen actuel).
+- $H_1$ : La stratégie améliore le score ( $\mu > 50$ ).
 
 ---
 
 ### **Statistique du test**
 
-**Formule** :$Z = \frac{\bar{x} - \mu}{SE}$
+**Formule** : $Z = \frac{\bar{x} - \mu}{SE}$
 
--$Z$: Statistique du test (nombre d’écarts-types entre la moyenne observée et la moyenne sous$H_0$).
--$\bar{x}$: Moyenne observée dans l’échantillon.
--$\mu$: Moyenne attendue sous$H_0$.
--$SE$: Erreur standard.
+- $Z$ : Statistique du test (nombre d’écarts-types entre la moyenne observée et la moyenne sous$H_0$ ).
+- $\bar{x}$ : Moyenne observée dans l’échantillon.
+- $\mu$ : Moyenne attendue sous$H_0$.
+- $SE$ : Erreur standard.
 
 **Explication** :  
-La statistique$Z$mesure la distance entre la moyenne observée ($\bar{x}$) et la moyenne attendue ($\mu$), normalisée par l’erreur standard ($SE$). Une valeur$Z$élevée indique que$\bar{x}$est loin de$\mu$, ce qui soutient$H_1$.
+La statistique$Z$mesure la distance entre la moyenne observée ( $\bar{x}$ ) et la moyenne attendue ( $\mu$ ), normalisée par l’erreur standard ( $SE$ ). Une valeur$Z$élevée indique que$\bar{x}$est loin de $\mu$, ce qui soutient$H_1$.
 
 **Exemple** :  
-Si$\bar{x} = 55$,$\mu = 50$, et$SE = 2$, alors :$Z = \frac{55 - 50}{2} = 2.5$Un$Z$de 2.5 indique que la moyenne observée est à 2.5 écarts-types de la moyenne attendue.
+Si$\bar{x} = 55$, $\mu = 50$, et$SE = 2$, alors :$Z = \frac{55 - 50}{2} = 2.5$Un$Z$de 2.5 indique que la moyenne observée est à 2.5 écarts-types de la moyenne attendue.
 
 ---
 
@@ -583,11 +583,11 @@ Si$\bar{x} = 55$,$\mu = 50$, et$SE = 2$, alors :$Z = \frac{55 - 50}{2} = 2.5$Un$
 **Définition** :  
 La **p-valeur** est la probabilité d’obtenir un résultat aussi extrême (ou plus extrême) que celui observé, sous l’hypothèse$H_0$.
 
-- Si$p$-valeur < niveau de significativité ($\alpha$, souvent fixé à 0.05), on rejette$H_0$.
+- Si$p$-valeur < niveau de significativité ( $\alpha$, souvent fixé à 0.05), on rejette$H_0$.
 - Si$p$-valeur ≥$\alpha$, on ne rejette pas$H_0$.
 
 **Explication** :  
-La$p$-valeur quantifie la plausibilité de$H_0$. Plus elle est faible, moins les données sont compatibles avec$H_0$, et plus il est raisonnable d’accepter$H_1$.
+La$p$-valeur quantifie la plausibilité de $H_0$. Plus elle est faible, moins les données sont compatibles avec$H_0$, et plus il est raisonnable d’accepter$H_1$.
 
 **Exemple** :  
 Si$Z = 2.5$, la$p$-valeur (à partir des tables de la loi normale) est environ 0.012. Avec un seuil$\alpha = 0.05$, on rejette$H_0$et accepte$H_1$, concluant que la nouvelle stratégie améliore le score.
@@ -635,11 +635,11 @@ Ce tableau montre que les joueurs avancés préfèrent davantage l’arme A par 
 
 ### **Test du$\chi^2$**
 
-**Formule** :$\chi^2 = \sum \frac{(O - E)^2}{E}$
+**Formule** : $\chi^2 = \sum \frac{(O - E)^2}{E}$
 
--$\chi^2$: Statistique du test.
--$O$: Valeur observée dans chaque cellule.
--$E$: Valeur attendue (si les deux variables étaient indépendantes).
+- $\chi^2$ : Statistique du test.
+- $O$ : Valeur observée dans chaque cellule.
+- $E$ : Valeur attendue (si les deux variables étaient indépendantes).
 
 **Calcul des valeurs attendues** :  
 Les valeurs $E$ sont calculées comme : $E = \frac{\text{Total ligne} \times \text{Total colonne}}{\text{Total général}}$
@@ -674,15 +674,15 @@ Un intervalle de confiance (IC) est une plage de valeurs qui estime avec une cer
 
 $\text{IC} = \bar{x} \pm z \cdot SE$
 
--$\bar{x}$: Moyenne de l’échantillon.
--$z$: Coefficient correspondant au niveau de confiance (par exemple,$z = 1.96$pour un IC de 95 %).
--$SE$: Erreur standard, donnée par$SE = \frac{\sigma}{\sqrt{n}}$, où$\sigma$est l’écart-type et$n$, la taille de l’échantillon.
+- $\bar{x}$ : Moyenne de l’échantillon.
+- $z$ : Coefficient correspondant au niveau de confiance (par exemple, $z = 1.96$pour un IC de 95 %).
+- $SE$ : Erreur standard, donnée par$SE = \frac{\sigma}{\sqrt{n}}$, où$\sigma$est l’écart-type et$n$, la taille de l’échantillon.
 
 **Explication** :  
 L’intervalle de confiance fournit une plage probable pour la valeur réelle d’un paramètre dans une population, en tenant compte de la variabilité des données. Le niveau de confiance indique la probabilité que cet intervalle contienne la vraie valeur.
 
 **Exemple** :  
-Dans un jeu, la moyenne des scores des joueurs est$\bar{x} = 70$avec un$SE = 2$. Pour un niveau de confiance de 95 % ($z = 1.96$), l’intervalle de confiance est :$\text{IC} = 70 \pm 1.96 \cdot 2 = [66.08, 73.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores se trouve entre 66.08 et 73.92.
+Dans un jeu, la moyenne des scores des joueurs est$\bar{x} = 70$avec un$SE = 2$. Pour un niveau de confiance de 95 % ( $z = 1.96$ ), l’intervalle de confiance est :$\text{IC} = 70 \pm 1.96 \cdot 2 = [66.08, 73.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores se trouve entre 66.08 et 73.92.
 
 ---
 
@@ -692,8 +692,8 @@ Dans un jeu, la moyenne des scores des joueurs est$\bar{x} = 70$avec un$SE = 2$.
 
 La largeur de l’intervalle dépend de :
 
-1. **Erreur standard ($SE$)** : Une variabilité plus faible ($\sigma$) ou un échantillon plus grand ($n$) réduit l’intervalle.
-2. **Niveau de confiance ($z$)** : Un niveau de confiance plus élevé (par exemple, 99 %, avec$z = 2.576$) élargit l’intervalle.
+1. **Erreur standard ( $SE$ )** : Une variabilité plus faible ( $\sigma$ ) ou un échantillon plus grand ( $n$ ) réduit l’intervalle.
+2. **Niveau de confiance ( $z$ )** : Un niveau de confiance plus élevé (par exemple, 99 %, avec$z = 2.576$ ) élargit l’intervalle.
 
 #### **Signification** :
 
@@ -733,7 +733,7 @@ L’analyse des résultats des statistiques descriptives permet de résumer un e
 
 #### **Tendances centrales** :
 
-- **Moyenne ($\bar{x}$)** : Représente la valeur moyenne des données.
+- **Moyenne ( $\bar{x}$ )** : Représente la valeur moyenne des données.
 - **Médiane** : Point central des données triées, moins sensible aux valeurs extrêmes que la moyenne.
 
 **Explication** :  
@@ -744,7 +744,7 @@ Comparer la moyenne et la médiane permet de détecter la symétrie ou l’asym�
 - Si$\text{moyenne} < \text{médiane}$, les données sont asymétriques à gauche (queue longue vers les petites valeurs).
 
 **Exemple** :  
-Dans un jeu, les scores des joueurs sont$[10, 15, 20, 25, 100]$:
+Dans un jeu, les scores des joueurs sont$[10, 15, 20, 25, 100]$ :
 
 - Moyenne :$\bar{x} = \frac{10 + 15 + 20 + 25 + 100}{5} = 34$.
 - Médiane :$\text{médiane} = 20$(valeur centrale après tri).  
@@ -759,20 +759,20 @@ Dans un jeu, les scores des joueurs sont$[10, 15, 20, 25, 100]$:
 
 ### **Analyse des écarts-types pour la dispersion**
 
-#### **Écart-type ($\sigma$)** :
+#### **Écart-type ( $\sigma$ )** :
 
 $\sigma = \sqrt{\frac{1}{n} \sum\_{i=1}^n (x_i - \bar{x})^2}$
 **Explication** :  
 L’écart-type mesure la dispersion des données autour de la moyenne :
 
-- Faible ($\sigma$bas) : Les valeurs sont regroupées près de la moyenne.
-- Élevé ($\sigma$haut) : Les données sont dispersées.
+- Faible ( $\sigma$bas) : Les valeurs sont regroupées près de la moyenne.
+- Élevé ( $\sigma$haut) : Les données sont dispersées.
 
 **Exemple** :  
 Dans un jeu, si deux groupes de joueurs ont les scores suivants :
 
-- Groupe A :$[18, 19, 20, 21, 22]$($\sigma \approx 1.41$).
-- Groupe B :$[10, 15, 20, 25, 30]$($\sigma \approx 7.07$).
+- Groupe A :$[18, 19, 20, 21, 22]$( $\sigma \approx 1.41$ ).
+- Groupe B :$[10, 15, 20, 25, 30]$( $\sigma \approx 7.07$ ).
 
 Le groupe B a des performances plus variées, tandis que le groupe A est plus homogène.
 
@@ -797,8 +797,8 @@ Un$Z$-score mesure combien de fois une valeur s’écarte de la moyenne. Une val
 **Exemple** :  
 Dans un jeu, les scores$[10, 15, 20, 25, 100]$présentent un outlier à 100, détectable par :
 
-- **Boxplot** : La valeur 100 se trouve bien au-dessus de$Q3 + 1.5 \cdot IQR$.
-- **$Z$-score** : Pour$\bar{x} = 34$et$\sigma = 36$,$ Z = \frac{100 - 34}{36} = 1.83 \ (\text{pas un outlier strict selon la règle } |Z| > 3).$
+- **Boxplot** : La valeur 100 se trouve bien au-dessus de $Q3 + 1.5 \cdot IQR$.
+- **$Z$-score** : Pour$\bar{x} = 34$et$\sigma = 36$, $ Z = \frac{100 - 34}{36} = 1.83 \ (\text{pas un outlier strict selon la règle } |Z| > 3).$
   **Applications dans les jeux** :
 
 - Repérer les performances anormalement élevées ou faibles.
@@ -830,11 +830,11 @@ Les anomalies dans les séries temporelles représentent des valeurs inattendues
 
 ### **$Z$-score**
 
-**Formule** :$Z = \frac{x - \mu}{\sigma}$
+**Formule** : $Z = \frac{x - \mu}{\sigma}$
 
--$x$: Valeur observée.
--$\mu$: Moyenne des données.
--$\sigma$: Écart-type.
+- $x$ : Valeur observée.
+- $\mu$ : Moyenne des données.
+- $\sigma$ : Écart-type.
 
 **Critère** : Une valeur est considérée comme une anomalie si$|Z| > 3$, c’est-à-dire qu’elle est à plus de 3 écarts-types de la moyenne.
 
@@ -842,7 +842,7 @@ Les anomalies dans les séries temporelles représentent des valeurs inattendues
 Le$Z$-score exprime combien de fois une valeur s’écarte de la moyenne en termes d’écarts-types. Cela permet d’identifier les points qui diffèrent significativement du comportement général.
 
 **Exemple** :  
-Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 10$, une valeur$x = 85$donne :$Z = \frac{85 - 50}{10} = 3.5$Puisque$|Z| > 3$,$x = 85$est une anomalie.
+Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 10$, une valeur$x = 85$donne :$Z = \frac{85 - 50}{10} = 3.5$Puisque$|Z| > 3$, $x = 85$est une anomalie.
 
 **Applications** :
 
@@ -853,14 +853,14 @@ Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 
 
 ### **Interquartile Range (IQR)**
 
-**Formule** :$IQR = Q3 - Q1$
+**Formule** : $IQR = Q3 - Q1$
 
--$Q1$: Premier quartile (25e percentile).
--$Q3$: Troisième quartile (75e percentile).
+- $Q1$ : Premier quartile (25e percentile).
+- $Q3$ : Troisième quartile (75e percentile).
 
 **Critère** : Une valeur est considérée comme une anomalie si :$x < Q1 - 1.5 \cdot IQR \quad \text{ou} \quad x > Q3 + 1.5 \cdot IQR$
 **Explication** :  
-L’IQR mesure la dispersion centrale des données. Toute valeur en dehors de$[Q1 - 1.5 \cdot IQR, Q3 + 1.5 \cdot IQR]$est considérée comme extrême. Contrairement au$Z$-score, cette méthode ne repose pas sur l’hypothèse que les données suivent une distribution normale.
+L’IQR mesure la dispersion centrale des données. Toute valeur en dehors de $[Q1 - 1.5 \cdot IQR, Q3 + 1.5 \cdot IQR]$est considérée comme extrême. Contrairement au$Z$-score, cette méthode ne repose pas sur l’hypothèse que les données suivent une distribution normale.
 
 **Exemple** :  
 Si$Q1 = 30$et$Q3 = 70$, alors$IQR = 40$. Une valeur$x = 10$est une anomalie car :$10 < Q1 - 1.5 \cdot IQR = 30 - 60 = -30$
@@ -882,7 +882,7 @@ Cette méthode compare chaque valeur à un seuil basé sur un pourcentage du max
 Cette méthode est simple et adaptée lorsque les données ont une limite supérieure naturelle ou attendue.
 
 **Exemple** :  
-Dans une série temporelle avec un maximum observé de$100$, toute valeur supérieure à$90$(90 % du maximum) pourrait être marquée comme une anomalie si le seuil est fixé à 90 %.
+Dans une série temporelle avec un maximum observé de $100$, toute valeur supérieure à$90$(90 % du maximum) pourrait être marquée comme une anomalie si le seuil est fixé à 90 %.
 
 **Applications** :
 
@@ -900,7 +900,7 @@ Les statistiques robustes, comme la médiane et la médiane absolue des écarts 
 
 $MAD = \text{médiane}(|x_i - \text{médiane}(x)|)$
 
-**Critère** : Une valeur est une anomalie si$|x - \text{médiane}| > k \cdot MAD$, où$k$est un facteur (souvent$k = 3$).
+**Critère** : Une valeur est une anomalie si$|x - \text{médiane}| > k \cdot MAD$, où$k$est un facteur (souvent$k = 3$ ).
 
 **Explication** :  
 Contrairement au$Z$-score, les statistiques robustes ne sont pas sensibles aux outliers déjà présents, ce qui en fait un outil idéal pour les données asymétriques ou fortement bruitées.
