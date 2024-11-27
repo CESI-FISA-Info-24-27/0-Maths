@@ -93,7 +93,7 @@ car il y a un seul cas favorable (le 6) sur les six résultats possibles (1, 2, 
 
 **Application dans les jeux de stratégie** :  
 
-Cette formule peut être utilisée pour calculer les chances de réussite d'un coup ou d'une tactique. Par exemple, si un joueur de cartes veut tirer un atout dans un jeu de 52 cartes où il reste 13 atouts, la probabilité est :$P(\text{Atout}) = \frac{13}{52} = \frac{1}{4}$
+Cette formule peut être utilisée pour calculer les chances de réussite d'un coup ou d'une tactique. Par exemple, si un joueur de cartes veut tirer un atout dans un jeu de 52 cartes où il reste 13 atouts, la probabilité est : $P(\text{Atout}) = \frac{13}{52} = \frac{1}{4}$
 
 ---
 
@@ -106,7 +106,7 @@ $$P(A \cap B) = P(A) \cdot P(B)$$
 Deux événements$A$et$B$sont dits indépendants si la probabilité qu'ils se produisent ensemble est égale au produit de leurs probabilités individuelles. Cela signifie que l'occurrence de l'un n'affecte pas l'autre.
 
 **Exemple** :  
-Dans un jeu de stratégie impliquant des dés, si vous lancez deux dés, la probabilité d'obtenir un 6 sur le premier dé ( $A$ ) et un 5 sur le second dé ( $B$ ) est :$P(A \cap B) = P(A) \cdot P(B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
+Dans un jeu de stratégie impliquant des dés, si vous lancez deux dés, la probabilité d'obtenir un 6 sur le premier dé ( $A$ ) et un 5 sur le second dé ( $B$ ) est : $P(A \cap B) = P(A) \cdot P(B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
 **Attention** :  
 Si les événements sont dépendants, comme tirer deux cartes consécutives d’un jeu sans remise, la formule ci-dessus ne s’applique pas. Les probabilités doivent être ajustées en tenant compte de la dépendance.
 
@@ -124,9 +124,9 @@ $$P(A^c) = 1 - P(A)$$
 La probabilité du complémentaire$A^c$d'un événement$A$correspond à la probabilité que$A$ne se produise pas. Cela repose sur le fait que la somme des probabilités de tous les résultats possibles d'une situation est égale à 1.
 
 **Exemple** :  
-Dans un lancer de dé, la probabilité de ne pas obtenir un 6 est :$P(\text{Pas 6}) = 1 - P(6) = 1 - \frac{1}{6} = \frac{5}{6}$
+Dans un lancer de dé, la probabilité de ne pas obtenir un 6 est : $P(\text{Pas 6}) = 1 - P(6) = 1 - \frac{1}{6} = \frac{5}{6}$
 **Utilisation dans les jeux de stratégie** :  
-Cela permet de déterminer les chances d'échec d'une action. Par exemple, si un joueur estime qu'il a 70 % de chances de réussir une attaque ( $P(\text{Réussite}) = 0.7$ ), alors ses chances d’échouer sont :$P(\text{Échec}) = 1 - 0.7 = 0.3$
+Cela permet de déterminer les chances d'échec d'une action. Par exemple, si un joueur estime qu'il a 70 % de chances de réussir une attaque ( $P(\text{Réussite}) = 0.7$ ), alors ses chances d’échouer sont : $P(\text{Échec}) = 1 - 0.7 = 0.3$
 
 ---
 
@@ -149,7 +149,7 @@ Dans les jeux, notamment ceux impliquant des choix stratégiques, l’utilisatio
 La loi binomiale s'applique lorsque nous avons une séquence de $n$essais indépendants, chaque essai ayant deux issues possibles : succès ou échec. La probabilité$P(X = k)$indique la probabilité d'obtenir exactement$k$succès.
 
 **Exemple** :  
-Dans un jeu où un joueur a 60 % de chances ( $p = 0.6$ ) de réussir une action, et où il tente 5 actions ( $n = 5$ ), la probabilité de réussir exactement 3 fois ( $k = 3$ ) est donnée par :$P(X = 3) = \binom{5}{3} (0.6)^3 (0.4)^2 = 10 \cdot 0.216 \cdot 0.16 = 0.3456$
+Dans un jeu où un joueur a 60 % de chances ( $p = 0.6$ ) de réussir une action, et où il tente 5 actions ( $n = 5$ ), la probabilité de réussir exactement 3 fois ( $k = 3$ ) est donnée par : $P(X = 3) = \binom{5}{3} (0.6)^3 (0.4)^2 = 10 \cdot 0.216 \cdot 0.16 = 0.3456$
 **Application dans les jeux** :  
 Cette loi est utile pour évaluer les stratégies reposant sur des actions répétées, comme le nombre d’attaques réussies ou la probabilité de remporter un certain nombre de manches.
 
@@ -166,7 +166,7 @@ Cette loi est utile pour évaluer les stratégies reposant sur des actions rép�
 La loi de Poisson s'applique aux événements rares sur un intervalle de temps ou d’espace. Elle modélise la probabilité d'observer exactement$k$occurrences lorsque la moyenne des occurrences est$\lambda$.
 
 **Exemple** :  
-Dans un jeu de stratégie, supposons qu’un joueur subisse en moyenne 2 attaques par tour ( $\lambda = 2$ ). La probabilité qu’il subisse exactement 3 attaques lors d’un tour est :$P(X = 3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \cdot 0.1353}{6} = 0.1804$
+Dans un jeu de stratégie, supposons qu’un joueur subisse en moyenne 2 attaques par tour ( $\lambda = 2$ ). La probabilité qu’il subisse exactement 3 attaques lors d’un tour est : $P(X = 3) = \frac{2^3 e^{-2}}{3!} = \frac{8 \cdot 0.1353}{6} = 0.1804$
 **Application dans les jeux** :  
 La loi de Poisson aide à évaluer les risques d’événements rares, comme des attaques critiques, ou des scénarios inhabituels mais potentiellement dangereux.
 
@@ -179,7 +179,7 @@ La loi de Poisson aide à évaluer les risques d’événements rares, comme des
 L'espérance mathématique est la moyenne pondérée des résultats possibles, où chaque résultat est multiplié par sa probabilité. Elle représente la valeur moyenne attendue d'une variable aléatoire après de nombreuses répétitions.
 
 **Exemple** :  
-Dans un jeu, un joueur tire au hasard une carte parmi trois cartes marquées$1, 2, 5$. Si chaque carte a une probabilité égale ( $P(X=x) = \frac{1}{3}$ ), l’espérance des gains est :$E(X) = 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3} + 5 \cdot \frac{1}{3} = \frac{1 + 2 + 5}{3} = 2.67$
+Dans un jeu, un joueur tire au hasard une carte parmi trois cartes marquées$1, 2, 5$. Si chaque carte a une probabilité égale ( $P(X=x) = \frac{1}{3}$ ), l’espérance des gains est : $E(X) = 1 \cdot \frac{1}{3} + 2 \cdot \frac{1}{3} + 5 \cdot \frac{1}{3} = \frac{1 + 2 + 5}{3} = 2.67$
 **Application dans les jeux** :  
 L'espérance permet d'évaluer la rentabilité ou le risque moyen d’une stratégie, comme les gains espérés dans une série de paris.
 
@@ -203,7 +203,7 @@ Les statistiques descriptives permettent de résumer, analyser et interpréter u
 La moyenne représente la valeur centrale ou typique d’un ensemble de données. Elle est obtenue en additionnant toutes les valeurs puis en divisant par le nombre total d’observations.
 
 **Exemple** :  
-Dans un jeu où les scores des joueurs sont$10, 15, 20, 25, 30$, la moyenne des scores est :$\bar{x} = \frac{10 + 15 + 20 + 25 + 30}{5} = 20$
+Dans un jeu où les scores des joueurs sont$10, 15, 20, 25, 30$, la moyenne des scores est : $\bar{x} = \frac{10 + 15 + 20 + 25 + 30}{5} = 20$
 **Application dans les jeux** :  
 La moyenne peut être utilisée pour estimer la performance moyenne des joueurs ou pour évaluer le score attendu dans des conditions similaires.
 
@@ -218,7 +218,7 @@ La médiane est la valeur centrale d’un ensemble de données triées (par ordr
 La médiane est une mesure de tendance centrale robuste, moins sensible aux valeurs extrêmes (outliers) que la moyenne.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 100$, la médiane est$20$(valeur centrale après tri). Si les scores étaient$10, 15, 20, 25$, la médiane serait :$\text{Médiane} = \frac{15 + 20}{2} = 17.5$
+Pour les scores$10, 15, 20, 25, 100$, la médiane est$20$(valeur centrale après tri). Si les scores étaient$10, 15, 20, 25$, la médiane serait : $\text{Médiane} = \frac{15 + 20}{2} = 17.5$
 **Application dans les jeux** :  
 La médiane est utile pour identifier une "performance typique" lorsqu'il y a des scores aberrants, par exemple des joueurs exceptionnellement mauvais ou bons.
 
@@ -237,7 +237,7 @@ La médiane est utile pour identifier une "performance typique" lorsqu'il y a de
 L’écart-type mesure la dispersion ou la variabilité des données autour de la moyenne. Un écart-type faible indique que les données sont regroupées près de la moyenne, tandis qu’un écart-type élevé signale une grande variation.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ :$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
+Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ : $\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
 = \sqrt{\frac{100 + 25 + 0 + 25 + 100}{5}} = 7.07$
 **Application dans les jeux** :  
 L’écart-type aide à évaluer la stabilité des performances. Par exemple, dans un jeu compétitif, un joueur avec un faible écart-type est plus régulier.
@@ -253,7 +253,7 @@ L’écart-type aide à évaluer la stabilité des performances. Par exemple, da
 - $x$ : Valeur d’intérêt.
 
 **Explication** :  
-La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres :$\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
+La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres : $\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
 
 **Exemple** :  
 Dans un jeu, si les scores suivent une distribution normale avec$\mu = 50$et$\sigma = 10$, environ 68 % des scores se situent entre$40$et$60$.
@@ -281,7 +281,7 @@ Les statistiques descriptives permettent de résumer, analyser et interpréter u
 La moyenne représente la valeur centrale ou typique d’un ensemble de données. Elle est obtenue en additionnant toutes les valeurs puis en divisant par le nombre total d’observations.
 
 **Exemple** :  
-Dans un jeu où les scores des joueurs sont$10, 15, 20, 25, 30$, la moyenne des scores est :$\bar{x} = \frac{10 + 15 + 20 + 25 + 30}{5} = 20$
+Dans un jeu où les scores des joueurs sont$10, 15, 20, 25, 30$, la moyenne des scores est : $\bar{x} = \frac{10 + 15 + 20 + 25 + 30}{5} = 20$
 **Application dans les jeux** :  
 La moyenne peut être utilisée pour estimer la performance moyenne des joueurs ou pour évaluer le score attendu dans des conditions similaires.
 
@@ -296,7 +296,7 @@ La médiane est la valeur centrale d’un ensemble de données triées (par ordr
 La médiane est une mesure de tendance centrale robuste, moins sensible aux valeurs extrêmes (outliers) que la moyenne.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 100$, la médiane est$20$(valeur centrale après tri). Si les scores étaient$10, 15, 20, 25$, la médiane serait :$\text{Médiane} = \frac{15 + 20}{2} = 17.5$
+Pour les scores$10, 15, 20, 25, 100$, la médiane est$20$(valeur centrale après tri). Si les scores étaient$10, 15, 20, 25$, la médiane serait : $\text{Médiane} = \frac{15 + 20}{2} = 17.5$
 **Application dans les jeux** :  
 La médiane est utile pour identifier une "performance typique" lorsqu'il y a des scores aberrants, par exemple des joueurs exceptionnellement mauvais ou bons.
 
@@ -315,7 +315,7 @@ La médiane est utile pour identifier une "performance typique" lorsqu'il y a de
 L’écart-type mesure la dispersion ou la variabilité des données autour de la moyenne. Un écart-type faible indique que les données sont regroupées près de la moyenne, tandis qu’un écart-type élevé signale une grande variation.
 
 **Exemple** :  
-Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ :$\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
+Pour les scores$10, 15, 20, 25, 30$, où$\bar{x} = 20$ : $\sigma = \sqrt{\frac{(10-20)^2 + (15-20)^2 + (20-20)^2 + (25-20)^2 + (30-20)^2}{5}}
 = \sqrt{\frac{100 + 25 + 0 + 25 + 100}{5}} = 7.07$
 **Application dans les jeux** :  
 L’écart-type aide à évaluer la stabilité des performances. Par exemple, dans un jeu compétitif, un joueur avec un faible écart-type est plus régulier.
@@ -331,7 +331,7 @@ L’écart-type aide à évaluer la stabilité des performances. Par exemple, da
 - $x$ : Valeur d’intérêt.
 
 **Explication** :  
-La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres :$\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
+La loi normale, ou distribution gaussienne, est une courbe en cloche symétrique centrée sur la moyenne$\mu$. Elle est caractérisée par deux paramètres : $\mu$(moyenne) et$\sigma$(écart-type). Environ 68 % des données se trouvent dans l’intervalle$[\mu - \sigma, \mu + \sigma]$, et 95 % dans$[\mu - 2\sigma, \mu + 2\sigma]$.
 
 **Exemple** :  
 Dans un jeu, si les scores suivent une distribution normale avec$\mu = 50$et$\sigma = 10$, environ 68 % des scores se situent entre$40$et$60$.
@@ -439,7 +439,7 @@ $b = \bar{y} - a \bar{x}$
 La pente ( $a$ ) indique le taux de variation de la variable$y$par rapport à$x$. Si$a > 0$, $y$augmente avec$x$; si$a < 0$, $y$diminue avec$x$. L’ordonnée à l’origine ( $b$ ) représente la valeur de départ de $y$lorsque$x$est nul.
 
 **Exemple** :  
-Dans un jeu, $x$représente le nombre de sessions d’entraînement et$y$le score moyen obtenu. Si$a = 3$et$b = 50$, la relation est donnée par :$y = 3x + 50$Cela signifie que chaque session d'entraînement supplémentaire augmente le score moyen de 3 points, avec un score initial de 50 sans entraînement.
+Dans un jeu, $x$représente le nombre de sessions d’entraînement et$y$le score moyen obtenu. Si$a = 3$et$b = 50$, la relation est donnée par : $y = 3x + 50$Cela signifie que chaque session d'entraînement supplémentaire augmente le score moyen de 3 points, avec un score initial de 50 sans entraînement.
 
 **Application dans les jeux** :  
 La formule est utilisée pour :
@@ -462,7 +462,7 @@ La formule est utilisée pour :
 Le$MSE$mesure l’erreur globale entre les valeurs prédites ( $\hat{y}\_i$ ) et les valeurs observées ( $y_i$ ). Plus le$MSE$est faible, meilleur est l’ajustement de la droite aux données.
 
 **Exemple** :  
-Pour les valeurs observées$y = [20, 25, 30]$et les valeurs prédites$\hat{y} = [22, 24, 29]$, l’erreur quadratique moyenne est calculée comme suit :$MSE = \frac{(20-22)^2 + (25-24)^2 + (30-29)^2}{3} = \frac{4 + 1 + 1}{3} = 2$
+Pour les valeurs observées$y = [20, 25, 30]$et les valeurs prédites$\hat{y} = [22, 24, 29]$, l’erreur quadratique moyenne est calculée comme suit : $MSE = \frac{(20-22)^2 + (25-24)^2 + (30-29)^2}{3} = \frac{4 + 1 + 1}{3} = 2$
 **Application dans les jeux** :  
 Le$MSE$est utile pour :
 
@@ -496,7 +496,7 @@ L’estimation des erreurs est essentielle en statistique pour mesurer la fiabil
 L’erreur standard mesure la variabilité de la moyenne d’un échantillon par rapport à la moyenne réelle de la population. Plus l’échantillon est grand ( $n$élevé), plus l’erreur standard est faible, ce qui signifie que la moyenne estimée est plus proche de la vraie moyenne.
 
 **Exemple** :  
-Supposons que dans un jeu, les scores moyens des joueurs ( $\bar{x}$ ) ont un écart-type$\sigma = 10$, et que l'échantillon comprend$n = 25$joueurs. L’erreur standard est :$SE = \frac{10}{\sqrt{25}} = \frac{10}{5} = 2$Cela signifie que la moyenne calculée à partir de cet échantillon a une incertitude de ±2 points.
+Supposons que dans un jeu, les scores moyens des joueurs ( $\bar{x}$ ) ont un écart-type$\sigma = 10$, et que l'échantillon comprend$n = 25$joueurs. L’erreur standard est : $SE = \frac{10}{\sqrt{25}} = \frac{10}{5} = 2$Cela signifie que la moyenne calculée à partir de cet échantillon a une incertitude de ±2 points.
 
 **Application dans les jeux** :  
 L’erreur standard est utilisée pour :
@@ -518,7 +518,7 @@ L’erreur standard est utilisée pour :
 L’intervalle de confiance (IC) donne une plage dans laquelle on estime que la vraie moyenne de la population se trouve avec une certaine probabilité (95 % dans cet exemple). Plus$SE$est faible, plus l’intervalle est étroit, indiquant une estimation précise.
 
 **Exemple** :  
-Si la moyenne des scores des joueurs est$\bar{x} = 50$avec un$SE = 2$, l’intervalle de confiance à 95 % est :$\text{IC} = 50 \pm 1.96 \cdot 2 = [46.08, 53.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores des joueurs se trouve entre 46.08 et 53.92.
+Si la moyenne des scores des joueurs est$\bar{x} = 50$avec un$SE = 2$, l’intervalle de confiance à 95 % est : $\text{IC} = 50 \pm 1.96 \cdot 2 = [46.08, 53.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores des joueurs se trouve entre 46.08 et 53.92.
 
 **Application dans les jeux** :
 
@@ -574,7 +574,7 @@ Dans un jeu, on teste si une nouvelle stratégie améliore le score moyen.
 La statistique$Z$mesure la distance entre la moyenne observée ( $\bar{x}$ ) et la moyenne attendue ( $\mu$ ), normalisée par l’erreur standard ( $SE$ ). Une valeur$Z$élevée indique que$\bar{x}$est loin de $\mu$, ce qui soutient$H_1$.
 
 **Exemple** :  
-Si$\bar{x} = 55$, $\mu = 50$, et$SE = 2$, alors :$Z = \frac{55 - 50}{2} = 2.5$Un$Z$de 2.5 indique que la moyenne observée est à 2.5 écarts-types de la moyenne attendue.
+Si$\bar{x} = 55$, $\mu = 50$, et$SE = 2$, alors : $Z = \frac{55 - 50}{2} = 2.5$Un$Z$de 2.5 indique que la moyenne observée est à 2.5 écarts-types de la moyenne attendue.
 
 ---
 
@@ -647,7 +647,7 @@ Les valeurs $E$ sont calculées comme : $E = \frac{\text{Total ligne} \times \te
 Le test $\chi^2$ vérifie si deux variables catégoriques sont indépendantes. Une valeur $\chi^2$ élevée indique une dépendance entre les variables, tandis qu’une valeur faible suggère une indépendance.
 
 **Exemple** :  
-Dans le tableau précédent, pour la cellule "Débutant, Arme A", l’attendu$E$est calculé comme :$E = \frac{\text{Total ligne Débutant} \times \text{Total colonne Arme A}}{\text{Total général}} = \frac{80 \times 100}{200} = 40$La contribution à$\chi^2$pour cette cellule est :$\frac{(O - E)^2}{E} = \frac{(30 - 40)^2}{40} = \frac{100}{40} = 2.5$
+Dans le tableau précédent, pour la cellule "Débutant, Arme A", l’attendu$E$est calculé comme : $E = \frac{\text{Total ligne Débutant} \times \text{Total colonne Arme A}}{\text{Total général}} = \frac{80 \times 100}{200} = 40$La contribution à$\chi^2$pour cette cellule est : $\frac{(O - E)^2}{E} = \frac{(30 - 40)^2}{40} = \frac{100}{40} = 2.5$
 Le test$\chi^2$total additionne ces contributions pour toutes les cellules et compare la valeur obtenue à une table critique pour évaluer l’indépendance des variables.
 
 **Application dans les jeux** :
@@ -682,7 +682,7 @@ $\text{IC} = \bar{x} \pm z \cdot SE$
 L’intervalle de confiance fournit une plage probable pour la valeur réelle d’un paramètre dans une population, en tenant compte de la variabilité des données. Le niveau de confiance indique la probabilité que cet intervalle contienne la vraie valeur.
 
 **Exemple** :  
-Dans un jeu, la moyenne des scores des joueurs est$\bar{x} = 70$avec un$SE = 2$. Pour un niveau de confiance de 95 % ( $z = 1.96$ ), l’intervalle de confiance est :$\text{IC} = 70 \pm 1.96 \cdot 2 = [66.08, 73.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores se trouve entre 66.08 et 73.92.
+Dans un jeu, la moyenne des scores des joueurs est$\bar{x} = 70$avec un$SE = 2$. Pour un niveau de confiance de 95 % ( $z = 1.96$ ), l’intervalle de confiance est : $\text{IC} = 70 \pm 1.96 \cdot 2 = [66.08, 73.92]$Cela signifie qu’il y a 95 % de chances que la vraie moyenne des scores se trouve entre 66.08 et 73.92.
 
 ---
 
@@ -746,8 +746,8 @@ Comparer la moyenne et la médiane permet de détecter la symétrie ou l’asym�
 **Exemple** :  
 Dans un jeu, les scores des joueurs sont$[10, 15, 20, 25, 100]$ :
 
-- Moyenne :$\bar{x} = \frac{10 + 15 + 20 + 25 + 100}{5} = 34$.
-- Médiane :$\text{médiane} = 20$(valeur centrale après tri).  
+- Moyenne : $\bar{x} = \frac{10 + 15 + 20 + 25 + 100}{5} = 34$.
+- Médiane : $\text{médiane} = 20$(valeur centrale après tri).  
   La moyenne est nettement plus élevée que la médiane, suggérant un outlier à 100.
 
 **Applications dans les jeux** :
@@ -771,8 +771,8 @@ L’écart-type mesure la dispersion des données autour de la moyenne :
 **Exemple** :  
 Dans un jeu, si deux groupes de joueurs ont les scores suivants :
 
-- Groupe A :$[18, 19, 20, 21, 22]$( $\sigma \approx 1.41$ ).
-- Groupe B :$[10, 15, 20, 25, 30]$( $\sigma \approx 7.07$ ).
+- Groupe A : $[18, 19, 20, 21, 22]$( $\sigma \approx 1.41$ ).
+- Groupe B : $[10, 15, 20, 25, 30]$( $\sigma \approx 7.07$ ).
 
 Le groupe B a des performances plus variées, tandis que le groupe A est plus homogène.
 
@@ -787,7 +787,7 @@ Le groupe B a des performances plus variées, tandis que le groupe A est plus ho
 
 #### **Boxplots**
 
-Un boxplot visualise la répartition des données en montrant les quartiles, la médiane et les éventuels outliers. Un point est considéré comme un outlier s’il se trouve en dehors de l’intervalle :$[Q1 - 1.5 \cdot IQR, Q3 + 1.5 \cdot IQR]$où$IQR = Q3 - Q1$est l’écart interquartile.
+Un boxplot visualise la répartition des données en montrant les quartiles, la médiane et les éventuels outliers. Un point est considéré comme un outlier s’il se trouve en dehors de l’intervalle : $[Q1 - 1.5 \cdot IQR, Q3 + 1.5 \cdot IQR]$où$IQR = Q3 - Q1$est l’écart interquartile.
 
 #### **$Z$-scores**
 
@@ -842,7 +842,7 @@ Les anomalies dans les séries temporelles représentent des valeurs inattendues
 Le$Z$-score exprime combien de fois une valeur s’écarte de la moyenne en termes d’écarts-types. Cela permet d’identifier les points qui diffèrent significativement du comportement général.
 
 **Exemple** :  
-Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 10$, une valeur$x = 85$donne :$Z = \frac{85 - 50}{10} = 3.5$Puisque$|Z| > 3$, $x = 85$est une anomalie.
+Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 10$, une valeur$x = 85$donne : $Z = \frac{85 - 50}{10} = 3.5$Puisque$|Z| > 3$, $x = 85$est une anomalie.
 
 **Applications** :
 
@@ -858,12 +858,12 @@ Pour une série temporelle avec une moyenne$\mu = 50$et un écart-type$\sigma = 
 - $Q1$ : Premier quartile (25e percentile).
 - $Q3$ : Troisième quartile (75e percentile).
 
-**Critère** : Une valeur est considérée comme une anomalie si :$x < Q1 - 1.5 \cdot IQR \quad \text{ou} \quad x > Q3 + 1.5 \cdot IQR$
+**Critère** : Une valeur est considérée comme une anomalie si : $x < Q1 - 1.5 \cdot IQR \quad \text{ou} \quad x > Q3 + 1.5 \cdot IQR$
 **Explication** :  
 L’IQR mesure la dispersion centrale des données. Toute valeur en dehors de $[Q1 - 1.5 \cdot IQR, Q3 + 1.5 \cdot IQR]$est considérée comme extrême. Contrairement au$Z$-score, cette méthode ne repose pas sur l’hypothèse que les données suivent une distribution normale.
 
 **Exemple** :  
-Si$Q1 = 30$et$Q3 = 70$, alors$IQR = 40$. Une valeur$x = 10$est une anomalie car :$10 < Q1 - 1.5 \cdot IQR = 30 - 60 = -30$
+Si$Q1 = 30$et$Q3 = 70$, alors$IQR = 40$. Une valeur$x = 10$est une anomalie car : $10 < Q1 - 1.5 \cdot IQR = 30 - 60 = -30$
 **Applications** :
 
 - Identifier les comportements extrêmes des joueurs (par exemple, un temps de réaction exceptionnellement court ou long).
@@ -906,7 +906,7 @@ $MAD = \text{médiane}(|x_i - \text{médiane}(x)|)$
 Contrairement au$Z$-score, les statistiques robustes ne sont pas sensibles aux outliers déjà présents, ce qui en fait un outil idéal pour les données asymétriques ou fortement bruitées.
 
 **Exemple** :  
-Dans une série temporelle où la médiane est$50$et$MAD = 5$, une valeur$x = 70$est une anomalie car :$|70 - 50| = 20 > 3 \cdot 5 = 15$
+Dans une série temporelle où la médiane est$50$et$MAD = 5$, une valeur$x = 70$est une anomalie car : $|70 - 50| = 20 > 3 \cdot 5 = 15$
 **Applications** :
 
 - Détection des comportements anormaux dans des environnements de jeu où les données sont asymétriques.
