@@ -82,7 +82,7 @@ Dans les jeux de stratégie, la probabilité permet de modéliser et de comprend
 ### **Probabilité**
 
 **Formule** :  
-$$ P(A) = \frac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}} $$
+$$P(A) = \frac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}}$$
 
 **Explication** :  
 La probabilité d'un événement $ A $ correspond à la proportion des cas favorables parmi tous les cas possibles. Par exemple, dans un lancer de dé équilibré, la probabilité d'obtenir un 6 est :
