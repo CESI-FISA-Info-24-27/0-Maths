@@ -34,9 +34,7 @@ $$
 
 Chaque dé ayant 6 faces :
 
-$$
-P(A) = \frac{1}{6}, \quad P(B) = \frac{1}{6}
-$$
+$$P(A) = \frac{1}{6}, \quad P(B) = \frac{1}{6}$$
 
 Donc :
 
