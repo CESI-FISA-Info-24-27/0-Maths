@@ -27,6 +27,7 @@ Un joueur lance deux dés. Quelle est la probabilité que l’un des dés affich
 <summary>Solution</summary>
 Les deux événements sont indépendants. La probabilité est donnée par :
 
+
 $$
 P(A \cap B) = P(A) \cdot P(B)
 $$
