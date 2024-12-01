@@ -50,9 +50,7 @@ Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne
 ### Étape 1 : Transformation en $Z$-scores  
 Pour transformer les bornes $x = 50$ et $x = 75$ en $Z$-scores, on utilise la formule :
 
-$
-Z = \frac{x - \mu}{\sigma}.
-$
+$Z = \frac{x - \mu}{\sigma}$
 
 Pour $x = 50$ :
 
