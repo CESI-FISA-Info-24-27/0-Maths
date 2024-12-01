@@ -1,3 +1,4 @@
+# Examen blanc de Statistiques et Probabilités
 
 ## **Exercice 1 : Analyse combinatoire et probabilité conditionnelle**  
 Dans une urne contenant 5 boules rouges, 4 boules bleues, et 3 boules vertes, un joueur tire successivement 3 boules sans remise. Quelle est la probabilité que les trois boules tirées soient de couleurs différentes ?  
@@ -8,62 +9,37 @@ Dans une urne contenant 5 boules rouges, 4 boules bleues, et 3 boules vertes, un
 ### Étape 1 : Total des boules dans l’urne  
 L’urne contient un total de \(5 + 4 + 3 = 12\) boules.
 
-### Étape 2 : Probabilité de tirer des boules de couleurs différentes  
-Pour que les trois boules tirées soient de couleurs différentes, nous devons analyser les probabilités successives :
-
-1. La première boule peut être de n’importe quelle couleur.
-2. La deuxième boule doit être d’une couleur différente de la première.
-3. La troisième boule doit être d’une couleur différente des deux premières.
-
-#### Première boule :  
-La probabilité de tirer la première boule est \(1\), car tout tirage est valide.
-
-#### Deuxième boule :  
-Après avoir tiré une première boule, il reste \(12 - 1 = 11\) boules dans l’urne. Les boules restantes qui sont d’une couleur différente de la première représentent \(8\) boules sur les \(11\) restantes (si la première couleur compte \(4\) boules).
-
-La probabilité de tirer une deuxième boule de couleur différente est donc :
+### Étape 2 : Nombre total de tirages possibles  
+Le nombre total de façons de tirer 3 boules parmi 12 est :
 
 $$
-P(\text{2ème différente}) = \frac{8}{11}.
+C_{12}^3 = \frac{12 \cdot 11 \cdot 10}{3 \cdot 2 \cdot 1} = 220.
 $$
 
-#### Troisième boule :  
-Après avoir tiré deux boules, il reste \(12 - 2 = 10\) boules dans l’urne. Les boules restantes qui sont d’une couleur différente des deux premières représentent \(6\) boules.
-
-La probabilité de tirer une troisième boule de couleur différente est donc :
-
+### Étape 3 : Nombre de cas favorables (3 couleurs différentes)  
+Pour tirer une boule rouge, une bleue, et une verte :
 $$
-P(\text{3ème différente}) = \frac{6}{10}.
+5 \cdot 4 \cdot 3 = 60.
 $$
 
-### Étape 3 : Calcul de la probabilité totale  
-La probabilité totale est donnée par :
+### Étape 4 : Probabilité totale  
+La probabilité que les trois boules soient de couleurs différentes est :
 
 $$
-P(\text{3 couleurs différentes}) = P(\text{1ère boule}) \cdot P(\text{2ème différente}) \cdot P(\text{3ème différente}).
-$$
-
-En remplaçant :
-
-$$
-P(\text{3 couleurs différentes}) = 1 \cdot \frac{8}{11} \cdot \frac{6}{10}.
-$$
-
-Simplifions :
-
-$$
-P(\text{3 couleurs différentes}) = \frac{8 \cdot 6}{11 \cdot 10} = \frac{48}{110} = \frac{24}{55}.
+P(\text{3 couleurs différentes}) = \frac{\text{cas favorables}}{\text{cas totaux}} = \frac{60}{220} = \frac{3}{11} \approx 0.2727.
 $$
 
 ### Résultat final :  
-La probabilité que les trois boules tirées soient de couleurs différentes est :
+La probabilité que les trois boules tirées soient de couleurs différentes est :
 
 $$
-P = \frac{24}{55} \approx 0.436 \, (43,6\%).
+P = \frac{3}{11} \approx 0.2727 \, (27,27\%).
 $$
+
 </details>
 
 ---
+
 
 ## **Exercice 2 : Loi normale avec approximation**  
 Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne de 60 et un écart-type de 12. Quelle est la probabilité qu’un joueur obtienne un score entre 50 et 75 ?
@@ -124,107 +100,80 @@ Les heures d’entraînement (\(x\)) et les scores obtenus (\(y\)) pour 5 joueur
 | \(y\) | 10 | 12 | 15 | 20 | 25 |  
 
 1. Déterminez l’équation de la droite de régression.  
-2. Calculez le coefficient de corrélation \(r\).
+2. Calculez le coefficient de corrélation \(r\).  
 
 <details>
 <summary>Solution</summary>
 
 ### Étape 1 : Calcul des moyennes  
-Pour \(x\) :
+Pour \(x\) :  
+$$
+\bar{x} = 3.
+$$
 
+Pour \(y\) :  
 $$
-\bar{x} = \frac{1 + 2 + 3 + 4 + 5}{5} = 3.
+\bar{y} = 16.4.
 $$
 
-Pour \(y\) :
-
-$$
-\bar{y} = \frac{10 + 12 + 15 + 20 + 25}{5} = 16.4.
-$$
+---
 
 ### Étape 2 : Calcul de la pente (\(a\))  
-La pente est donnée par :
-
 $$
 a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}.
 $$
 
-Pour le numérateur (\(\sum (x_i - \bar{x})(y_i - \bar{y})\)) :
-
+Numérateur :
 $$
-\sum (x_i - \bar{x})(y_i - \bar{y}) = (1-3)(10-16.4) + (2-3)(12-16.4) + \dots + (5-3)(25-16.4).
-$$
-
-$$
-= 2 \cdot 6.4 + 1 \cdot 4.4 + 0 \cdot 0 + 1 \cdot 3.6 + 2 \cdot 8.6 = 42.8.
+\sum (x_i - \bar{x})(y_i - \bar{y}) = 38.
 $$
 
-Pour le dénominateur (\(\sum (x_i - \bar{x})^2\)) :
-
+Dénominateur :
 $$
-\sum (x_i - \bar{x})^2 = (1-3)^2 + (2-3)^2 + (3-3)^2 + (4-3)^2 + (5-3)^2.
-$$
-
-$$
-= 4 + 1 + 0 + 1 + 4 = 10.
+\sum (x_i - \bar{x})^2 = 10.
 $$
 
-Donc :
+Pente :
+$$
+a = \frac{38}{10} = 3.8.
+$$
 
-$$
-a = \frac{42.8}{10} = 4.28.
-$$
+---
 
 ### Étape 3 : Calcul de l’ordonnée à l’origine (\(b\))  
-L’ordonnée est donnée par :
-
 $$
-b = \bar{y} - a\bar{x}.
+b = \bar{y} - a\bar{x} = 16.4 - 3.8 \cdot 3 = 5.
 $$
 
+L’équation de la droite est donc :
 $$
-b = 16.4 - 4.28 \cdot 3 = 3.56.
+y = 3.8x + 5.
 $$
 
-L’équation de la droite de régression est donc :
-
-$$
-y = 4.28x + 3.56.
-$$
+---
 
 ### Étape 4 : Calcul du coefficient de corrélation (\(r\))  
-La formule de \(r\) est :
-
 $$
 r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \cdot \sum (y_i - \bar{y})^2}}.
 $$
 
-Pour \(\sum (y_i - \bar{y})^2\) :
-
 $$
-\sum (y_i - \bar{y})^2 = (10-16.4)^2 + (12-16.4)^2 + \dots + (25-16.4)^2.
+\sum (y_i - \bar{y})^2 = 149.2.
 $$
 
 $$
-= 40.96 + 19.36 + 1.96 + 12.96 + 73.96 = 149.2.
-$$
-
-Donc :
-
-$$
-r = \frac{42.8}{\sqrt{10 \cdot 149.2}} = \frac{42.8}{38.65} = 0.90.
+r = \frac{38}{\sqrt{10 \cdot 149.2}} = \frac{38}{38.64} \approx 0.984.
 $$
 
 ### Résultat final :  
-1. L’équation de la droite est \(y = 4.28x + 3.56\).  
-2. Le coefficient de corrélation est \(r = 0.90\), indiquant une forte corrélation positive.
-
+1. L’équation de la droite est \(y = 3.8x + 5\).  
+2. Le coefficient de corrélation est \(r = 0.984\), indiquant une forte corrélation positive.
 
 </details>
 
 ---
 
-### **Exercice 4 : Loi normale (4 points)**  
+## **Exercice 4 : Loi normale (4 points)**  
 Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne de \( \mu = 75 \) et un écart-type de \( \sigma = 10 \).
 
 1. Quelle est la probabilité qu’un joueur obtienne un score supérieur à \(85\) ?  
@@ -305,7 +254,7 @@ $$
 
 ---
 
-### **Exercice 5 : Régression linéaire (4 points)**  
+## **Exercice 5 : Régression linéaire (4 points)**  
 Les données suivantes représentent les heures d’entraînement (\(x\)) et les scores obtenus (\(y\)) pour 4 joueurs :  
 | \(x\) | 1 | 2 | 3 | 4 |  
 |------|---|---|---|---|  
