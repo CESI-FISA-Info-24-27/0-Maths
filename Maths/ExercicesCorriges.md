@@ -11,9 +11,7 @@ Les nombres supérieurs ou égaux à 4 sont {4, 5, 6}. Cela représente 3 cas fa
 
 La probabilité est :
 
-$$
-P = \frac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}} = \frac{3}{6} = 0.5
-$$
+$P = \frac{\text{Nombre de cas favorables}}{\text{Nombre de cas possibles}} = \frac{3}{6} = 0.5$
 
 **Réponse :** 50 %.
 </details>
@@ -28,19 +26,15 @@ Un joueur lance deux dés. Quelle est la probabilité que l’un des dés affich
 Les deux événements sont indépendants. La probabilité est donnée par :
 
 
-$$
-P(A \cap B) = P(A) \cdot P(B)
-$$
+$P(A \cap B) = P(A) \cdot P(B)$
 
 Chaque dé ayant 6 faces :
 
-$$P(A) = \frac{1}{6}, \quad P(B) = \frac{1}{6}$$
+$P(A) = \frac{1}{6}, \quad P(B) = \frac{1}{6}$
 
 Donc :
 
-$$
-P(A \cap B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}
-$$
+$P(A \cap B) = \frac{1}{6} \cdot \frac{1}{6} = \frac{1}{36}$
 
 **Réponse :** $ \approx 2,78 \% $.
 </details>
@@ -55,93 +49,134 @@ Un joueur tire une carte d’un jeu de 52 cartes. Quelle est la probabilité que
 Les figures représentent $3 \cdot 4 = 12$ cartes sur les 52 cartes.  
 La probabilité de tirer une figure est :
 
-$$
-P(\text{Figure}) = \frac{12}{52} = \frac{3}{13}
-$$
+$P(\text{Figure}) = \frac{12}{52} = \frac{3}{13}$
 
 La probabilité de ne pas tirer une figure est le complémentaire :
 
-$$
-P(\text{Non-Figure}) = 1 - P(\text{Figure}) = 1 - \frac{3}{13} = \frac{10}{13}
-$$
+$P(\text{Non-Figure}) = 1 - P(\text{Figure}) = 1 - \frac{3}{13} = \frac{10}{13}$
 
-**Réponse :** $ \approx 76,92 \% $.
+**Réponse :** $ \approx 76,92 \% $
+
 </details>
 
 ---
 
-### **Exercice 4 : Probabilité conditionnelle**  
+### **Exercice 4 : Probabilité conditionnelle**
+
 Dans un jeu de cartes, un joueur tire deux cartes successivement sans remise. Quelle est la probabilité que la première soit un cœur et la deuxième un as ?
 
 <details>
 <summary>Solution</summary>
-Événement $A$ : La première carte est un cœur.  
-Événement $B$ : La deuxième carte est un as.  
+Deux cas sont possibles pour que la première carte soit un cœur et la deuxième un as :
 
-La probabilité conditionnelle est donnée par :
+1. La première carte est l’As de Cœur, et la deuxième est un autre as.  
+   - La probabilité pour que la première carte soit l’As de Cœur est :
 
-$$
-P(A \cap B) = P(A) \cdot P(B|A)
-$$
+   $P(\text{As de cœur}) = \frac{1}{52}$
 
-- $P(A) = \frac{13}{52} = \frac{1}{4}$ (13 cœurs dans un jeu de 52 cartes).  
-- Si la première carte est un cœur, il reste 51 cartes dont 4 as :  
-$P(B|A) = \frac{4}{51}$.  
+   - Une fois l’As de Cœur tiré, il reste 3 autres as dans un paquet de 51 cartes :
 
-Donc :
+   $P(\text{Un autre as} | \text{As de cœur}) = \frac{3}{51}$
 
-$$
-P(A \cap B) = \frac{1}{4} \cdot \frac{4}{51} = \frac{1}{51} \approx 0.0196
-$$
+   Donc :
 
-**Réponse :** $ \approx 1,96 \% $.
+   $P(\text{As de cœur puis un autre as}) = \frac{1}{52} \cdot \frac{3}{51}$
+
+2. La première carte est un cœur autre que l’As de Cœur, et la deuxième est un as :  
+   - La probabilité pour que la première carte soit un cœur autre que l’As est :
+
+   $P(\text{Cœur sauf As}) = \frac{12}{52}$
+   - Une fois ce cœur tiré, il reste 4 as dans un paquet de 51 cartes :
+
+   $P(\text{Un as} | \text{Cœur sauf As}) = \frac{4}{51}$
+
+   Donc :
+
+   $P(\text{Cœur sauf As puis un as}) = \frac{12}{52} \cdot \frac{4}{51}$
+
+Additionnons les deux cas :
+
+$P(\text{Cœur puis un as}) = \frac{1}{52} \cdot \frac{3}{51} + \frac{12}{52} \cdot \frac{4}{51}$
+
+Simplifions :
+
+$P(\text{Cœur puis un as}) = \frac{3}{2652} + \frac{48}{2652} = \frac{51}{2652} = \frac{1}{52}$
+
+**Réponse :** $P = \frac{1}{52} \approx 1.92\%$.  
 </details>
 
 ---
 
-### **Exercice 5 : Probabilité combinatoire**  
-Dans un tirage aléatoire de 5 cartes d’un jeu de 52 cartes, quelle est la probabilité d’obtenir exactement 2 as ?
+### **Exercice 5 : Probabilité combinatoire ou loi de Bernoulli**
+
+Dans un tirage aléatoire de 5 cartes d’un jeu de 52 cartes, quelle est la probabilité d’obtenir exactement 2 as ?  
+
+#### **Cas 1 : Sans remise (combinatoire)**
 
 <details>
 <summary>Solution</summary>
-On utilise les combinaisons :
+Lorsque les cartes ne sont pas remises dans le paquet, on utilise les combinaisons pour résoudre l’exercice :
 
-$$
-P = \frac{\binom{4}{2} \cdot \binom{48}{3}}{\binom{52}{5}}
-$$
+$P = \frac{\binom{4}{2} \cdot \binom{48}{3}}{\binom{52}{5}}$
 
-- $\binom{4}{2}$ : Nombre de façons de choisir 2 as parmi 4.
+- $\binom{4}{2}$ : Nombre de façons de choisir 2 as parmi les 4 disponibles :
 
-$$
-\binom{4}{2} = \frac{4!}{2! \cdot (4-2)!} = 6
-$$
+$\binom{4}{2} = \frac{4!}{2!(4-2)!} = 6.$
 
-- $\binom{48}{3}$ : Nombre de façons de choisir 3 autres cartes parmi les 48 restantes.
+- $\binom{48}{3}$ : Nombre de façons de choisir 3 autres cartes parmi les 48 restantes :
 
-$$
-\binom{48}{3} = \frac{48 \cdot 47 \cdot 46}{3 \cdot 2 \cdot 1} = 17296
-$$
+$\binom{48}{3} = \frac{48 \cdot 47 \cdot 46}{3 \cdot 2 \cdot 1} = 17296$
 
-- $\binom{52}{5}$ : Nombre total de combinaisons possibles de 5 cartes.
+- $\binom{52}{5}$ : Nombre total de combinaisons possibles pour tirer 5 cartes :
 
-$$
-\binom{52}{5} = \frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 2598960
-$$
+$\binom{52}{5} = \frac{52 \cdot 51 \cdot 50 \cdot 49 \cdot 48}{5 \cdot 4 \cdot 3 \cdot 2 \cdot 1} = 2598960$
 
-En remplaçant :
+En remplaçant les valeurs :
 
-$$
-P = \frac{6 \cdot 17296}{2598960} \approx 0.0397
-$$
+$P = \frac{6 \cdot 17296}{2598960} \approx 0.0397$
 
-**Réponse :** $ \approx 3,97 \% $.
+**Réponse :** $P \approx 3.97\%$.
+
 </details>
 
----
+#### **Cas 2 : Avec remise (loi de Bernoulli)**
 
-Voici la suite des exercices corrigés avec des équations entourées de sauts de ligne pour un affichage clair.
+<details>
+<summary>Solution</summary>
+Lorsque les cartes sont remises dans le paquet, chaque tirage est indépendant. La probabilité de tirer un as à chaque tirage est :  
+$$
+p = \frac{4}{52} = \frac{1}{13}.
+$$
 
----
+On utilise la loi de Bernoulli pour $n = 5$ tirages et $k = 2$ succès (as) :  
+$$
+P(X = k) = \binom{n}{k} \cdot p^k \cdot (1-p)^{n-k}.
+$$
+
+- $\binom{5}{2}$ : Nombre de façons de choisir 2 succès parmi 5 tirages :
+
+$$
+\binom{5}{2} = \frac{5!}{2!(5-2)!} = 10.
+$$
+
+- $p^k = \left(\frac{1}{13}\right)^2 = \frac{1}{169}$.  
+- $(1-p)^{n-k} = \left(\frac{12}{13}\right)^3 = \frac{1728}{2197}$.  
+
+En remplaçant :  
+$$
+P(X = 2) = 10 \cdot \frac{1}{169} \cdot \frac{1728}{2197}.
+$$
+
+Simplifions :  
+$$
+P(X = 2) = \frac{17280}{3712933} \approx 0.0465.
+$$
+
+**Réponse :** $P \approx 4.65\%$.  
+</details>
+
+--- 
+
 
 ## **Thème : Lois de distribution discrètes**
 
@@ -187,64 +222,50 @@ Un joueur a 60 % de chances de réussir un coup. Si le joueur tente 5 coups, que
 <summary>Solution</summary>
 La probabilité d’au moins 3 succès est :
 
-$$
-P(X \geq 3) = P(X = 3) + P(X = 4) + P(X = 5)
-$$
+$P(X \geq 3) = P(X = 3) + P(X = 4) + P(X = 5)$
 
 Pour $P(X = k)$ :
 
-$$
-P(X = k) = \binom{5}{k} (0.6)^k (0.4)^{5-k}
-$$
+$P(X = k) = \binom{5}{k} (0.6)^k (0.4)^{5-k}$
 
 - $P(X = 3)$ :
 
-$$
-\binom{5}{3} = 10, \quad P(X = 3) = 10 \cdot (0.6)^3 \cdot (0.4)^2 = 0.3456
-$$
+$\binom{5}{3} = 10, \quad P(X = 3) = 10 \cdot (0.6)^3 \cdot (0.4)^2 = 0.3456$
 
 - $P(X = 4)$ :
 
-$$
-\binom{5}{4} = 5, \quad P(X = 4) = 5 \cdot (0.6)^4 \cdot (0.4)^1 = 0.2592
-$$
+$\binom{5}{4} = 5, \quad P(X = 4) = 5 \cdot (0.6)^4 \cdot (0.4)^1 = 0.2592$
 
 - $P(X = 5)$ :
 
-$$
-\binom{5}{5} = 1, \quad P(X = 5) = 1 \cdot (0.6)^5 \cdot (0.4)^0 = 0.07776
-$$
+$\binom{5}{5} = 1, \quad P(X = 5) = 1 \cdot (0.6)^5 \cdot (0.4)^0 = 0.07776$
 
 Donc :
 
-$$
-P(X \geq 3) = 0.3456 + 0.2592 + 0.07776 = 0.68256
-$$
+$P(X \geq 3) = 0.3456 + 0.2592 + 0.07776 = 0.68256$
 
 **Réponse :** $ \approx 68,26 \% $.
 </details>
 
 ---
 
-### **Exercice 8 : Loi de Poisson**  
+### **Exercice 8 : Loi de Poisson**
+
 Un joueur subit en moyenne 2 attaques critiques par partie. Quelle est la probabilité qu’il subisse exactement 0 attaque critique lors d’une partie ?
 
 <details>
 <summary>Solution</summary>
 On utilise la loi de Poisson :
 
-$$
-P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
-$$
+$P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}$
 
-Ici :  
-- $\lambda = 2$, $k = 0$.  
+Ici :
+
+- $\lambda = 2$, $k = 0$
 
 La probabilité est :
 
-$$
-P(X = 0) = \frac{2^0 e^{-2}}{0!} = e^{-2} \approx 0.1353
-$$
+$P(X = 0) = \frac{2^0 e^{-2}}{0!} = e^{-2} \approx 0.1353$
 
 **Réponse :** $ \approx 13,53 \% $.
 </details>
@@ -253,36 +274,38 @@ $$
 
 ## **Thème : Statistiques descriptives**
 
-### **Exercice 9 : Moyenne et médiane**  
+### **Exercice 9 : Moyenne et médiane**
+
 Les scores de 7 joueurs sont : 10, 12, 15, 18, 20, 25, 30. Calculez la moyenne et la médiane.
 
 <details>
 <summary>Solution</summary>
 1. **Moyenne** :  
 
-$$
-\bar{x} = \frac{\sum x_i}{n} = \frac{10 + 12 + 15 + 18 + 20 + 25 + 30}{7} = \frac{130}{7} \approx 18.57
-$$
+$\bar{x} = \frac{\sum x_i}{n} = \frac{10 + 12 + 15 + 18 + 20 + 25 + 30}{7} = \frac{130}{7} \approx 18.57$
 
-2. **Médiane** :  
+2. **Médiane** :
+
 Les données triées sont : {10, 12, 15, 18, 20, 25, 30}.  
 Le nombre total de données est impair ($n = 7$), donc la médiane est la valeur centrale :
 
 **Médiane :** $18$.
 
-**Réponse :** Moyenne $ \approx 18,57 $, Médiane $18$.
+**Réponse :** Moyenne $ \approx 18,57 $, Médiane $18$
+
 </details>
 
 ---
 
-### **Exercice 10 : Variance et écart-type**  
+### **Exercice 10 : Variance et écart-type**
+
 Les scores de 5 joueurs sont : 10, 20, 25, 30, 50. Calculez la variance et l’écart-type.
 
 <details>
 <summary>Solution</summary>
 1. **Moyenne** :  
 
-$$
+$
 \bar{x} = \frac{\sum x_i}{n} = \frac{10 + 20 + 25 + 30 + 50}{5} = \frac{135}{5} = 27
 $$
 
@@ -324,32 +347,23 @@ Les données triées sont : {10, 15, 20, 25, 30, 35, 100}.
 
 2. **IQR** :
 
-$$
-IQR = Q3 - Q1 = 35 - 15 = 20
-$$
+$IQR = Q3 - Q1 = 35 - 15 = 20$
 
 3. **Limites pour les outliers** :  
 - Limite inférieure :
 
-$$
-Q1 - 1.5 \cdot IQR = 15 - 1.5 \cdot 20 = -15
-$$
+$Q1 - 1.5 \cdot IQR = 15 - 1.5 \cdot 20 = -15$
 
 - Limite supérieure :
 
-$$
-Q3 + 1.5 \cdot IQR = 35 + 1.5 \cdot 20 = 65
-$$
+$Q3 + 1.5 \cdot IQR = 35 + 1.5 \cdot 20 = 65$
 
-4. **Vérification** :  
+4. **Vérification** :
+
 Le score $100$ est supérieur à la limite $65$, donc c’est un **outlier**.
 
 **Réponse :** L’outlier est $100$.
 </details>
-
----
-
-Voici la suite des exercices pour le **thème : Régression linéaire** avec les équations entourées de sauts de ligne pour un rendu clair.
 
 ---
 
@@ -507,7 +521,8 @@ $$
 
 ---
 
-### **Exercice 16 : Calcul de $R^2$ (coefficient de détermination)**  
+### **Exercice 16 : Calcul de $R^2$ (coefficient de détermination)**
+
 Les données suivantes représentent les scores observés ($y_i$) et les scores prévus ($\hat{y}_i$) :  
 | $y_i$  | 10  | 15  | 20  | 25  |  
 | $\hat{y}_i$ | 12  | 14  | 22  | 24  |  
