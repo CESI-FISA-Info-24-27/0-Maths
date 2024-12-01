@@ -12,42 +12,39 @@ L’urne contient un total de $5 + 4 + 3 = 12$ boules.
 ### Étape 2 : Nombre total de tirages possibles  
 Le nombre total de façons de tirer 3 boules parmi 12 est :
 
-$$
-C_{12}^3 = \frac{12 \cdot 11 \cdot 10}{3 \cdot 2 \cdot 1} = 220.
-$$
+$C_{12}^3 = \frac{12 \cdot 11 \cdot 10}{3 \cdot 2 \cdot 1} = 220$
 
-### Étape 3 : Nombre de cas favorables (3 couleurs différentes)  
+### Étape 3 : Nombre de cas favorables (3 couleurs différentes)
+
 Pour tirer une boule rouge, une bleue, et une verte :
-$$
-5 \cdot 4 \cdot 3 = 60.
-$$
 
-### Étape 4 : Probabilité totale  
+$5 \cdot 4 \cdot 3 = 60$
+
+### Étape 4 : Probabilité totale 
+
 La probabilité que les trois boules soient de couleurs différentes est :
 
-$$
-P(\text{3 couleurs différentes}) = \frac{\text{cas favorables}}{\text{cas totaux}} = \frac{60}{220} = \frac{3}{11} \approx 0.2727.
-$$
+$P(\text{3 couleurs différentes}) = \frac{\text{cas favorables}}{\text{cas totaux}} = \frac{60}{220} = \frac{3}{11} \approx 0.2727$
 
-### Résultat final :  
+### Résultat final
+
 La probabilité que les trois boules tirées soient de couleurs différentes est :
 
-$$
-P = \frac{3}{11} \approx 0.2727 \, (27,27\%).
-$$
+$P = \frac{3}{11} \approx 0.2727 \, (27,27\%)$
 
 </details>
 
 ---
 
+## **Exercice 2 : Loi normale avec approximation**
 
-## **Exercice 2 : Loi normale avec approximation**  
 Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne de 60 et un écart-type de 12. Quelle est la probabilité qu’un joueur obtienne un score entre 50 et 75 ?
 
 <details>
 <summary>Solution</summary>
 
-### Étape 1 : Transformation en $Z$-scores  
+### Étape 1 : Transformation en $Z$-scores
+
 Pour transformer les bornes $x = 50$ et $x = 75$ en $Z$-scores, on utilise la formule :
 
 $Z = \frac{x - \mu}{\sigma}$
@@ -243,15 +240,11 @@ Les données suivantes représentent les heures d’entraînement ($x$) et les s
 
 Pour $x$ :
 
-$$
-\bar{x} = \frac{1 + 2 + 3 + 4}{4} = 2.5.
-$$
+$\bar{x} = \frac{1 + 2 + 3 + 4}{4} = 2.5$
 
 Pour $y$ :
 
-$$
-\bar{y} = \frac{12 + 15 + 19 + 25}{4} = 17.75.
-$$
+$\bar{y} = \frac{12 + 15 + 19 + 25}{4} = 17.75$
 
 ---
 
@@ -259,91 +252,63 @@ $$
 
 La pente $a$ est donnée par la formule :
 
-$$
-a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}.
-$$
+$a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$
 
 #### Numérateur ($\sum (x_i - \bar{x})(y_i - \bar{y})$) :  
 
-$$
-\sum (x_i - \bar{x})(y_i - \bar{y}) = (1-2.5)(12-17.75) + (2-2.5)(15-17.75) + \dots + (4-2.5)(25-17.75).
-$$
+$\sum (x_i - \bar{x})(y_i - \bar{y}) = (1-2.5)(12-17.75) + (2-2.5)(15-17.75) + \dots + (4-2.5)(25-17.75)$
 
 Développons :
 
 - Pour $x_1 = 1$, $y_1 = 12$ :
 
-$$
-(1-2.5)(12-17.75) = (-1.5)(-5.75) = 8.625.
-$$
+$(1-2.5)(12-17.75) = (-1.5)(-5.75) = 8.625$
 
 - Pour $x_2 = 2$, $y_2 = 15$ :
 
-$$
-(2-2.5)(15-17.75) = (-0.5)(-2.75) = 1.375.
-$$
+$(2-2.5)(15-17.75) = (-0.5)(-2.75) = 1.375$
 
 - Pour $x_3 = 3$, $y_3 = 19$ :
 
-$$
-(3-2.5)(19-17.75) = (0.5)(1.25) = 0.625.
-$$
+$(3-2.5)(19-17.75) = (0.5)(1.25) = 0.625$
 
 - Pour $x_4 = 4$, $y_4 = 25$ :
 
-$$
-(4-2.5)(25-17.75) = (1.5)(7.25) = 10.875.
-$$
+$(4-2.5)(25-17.75) = (1.5)(7.25) = 10.875$
 
 La somme est :
 
-$$
-\sum (x_i - \bar{x})(y_i - \bar{y}) = 8.625 + 1.375 + 0.625 + 10.875 = 21.5.
-$$
+$\sum (x_i - \bar{x})(y_i - \bar{y}) = 8.625 + 1.375 + 0.625 + 10.875 = 21.5$
 
-#### Dénominateur ($\sum (x_i - \bar{x})^2$) :  
+#### Dénominateur ($\sum (x_i - \bar{x})^2$)
 
-$$
-\sum (x_i - \bar{x})^2 = (1-2.5)^2 + (2-2.5)^2 + \dots + (4-2.5)^2.
-$$
+$\sum (x_i - \bar{x})^2 = (1-2.5)^2 + (2-2.5)^2 + \dots + (4-2.5)^2$
 
 Développons :
 
 - Pour $x_1 = 1$ :
 
-$$
-(1-2.5)^2 = (-1.5)^2 = 2.25.
-$$
+$(1-2.5)^2 = (-1.5)^2 = 2.25$
 
 - Pour $x_2 = 2$ :
 
-$$
-(2-2.5)^2 = (-0.5)^2 = 0.25.
-$$
+$(2-2.5)^2 = (-0.5)^2 = 0.25$
 
 - Pour $x_3 = 3$ :
 
-$$
-(3-2.5)^2 = (0.5)^2 = 0.25.
-$$
+$(3-2.5)^2 = (0.5)^2 = 0.25$
 
 - Pour $x_4 = 4$ :
 
-$$
-(4-2.5)^2 = (1.5)^2 = 2.25.
-$$
+$(4-2.5)^2 = (1.5)^2 = 2.25$
 
 La somme est :
 
-$$
-\sum (x_i - \bar{x})^2 = 2.25 + 0.25 + 0.25 + 2.25 = 5.
-$$
+$\sum (x_i - \bar{x})^2 = 2.25 + 0.25 + 0.25 + 2.25 = 5$
 
-#### Calcul de $a$ :  
+#### Calcul de $a$
 
-$$
-a = \frac{21.5}{5} = 4.3.
-$$
+$a = \frac{21.5}{5} = 4.3$
 
 ---
 
@@ -351,21 +316,15 @@ $$
 
 L’ordonnée $b$ est donnée par :
 
-$$
-b = \bar{y} - a\bar{x}.
-$$
+$b = \bar{y} - a\bar{x}.$
 
 En remplaçant :
 
-$$
-b = 17.75 - 4.3 \cdot 2.5 = 17.75 - 10.75 = 7.
-$$
+$b = 17.75 - 4.3 \cdot 2.5 = 17.75 - 10.75 = 7$
 
 L’équation de la droite de régression est donc :
 
-$$
-y = 4.3x + 7.
-$$
+$y = 4.3x + 7$
 
 ---
 
@@ -373,11 +332,10 @@ $$
 
 En remplaçant $x = 5$ dans l’équation :
 
-$$
-y = 4.3 \cdot 5 + 7 = 21.5 + 7 = 28.5.
-$$
+$y = 4.3 \cdot 5 + 7 = 21.5 + 7 = 28.5$
 
-**Réponse finale :**  
+#### **Réponse finale**
+
 1. L’équation de la droite est $y = 4.3x + 7$.  
 2. Pour 5 heures d’entraînement, le score prédit est $28.5$.
 
