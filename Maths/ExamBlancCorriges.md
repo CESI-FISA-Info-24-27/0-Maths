@@ -54,45 +54,41 @@ $Z = \frac{x - \mu}{\sigma}$
 
 Pour $x = 50$ :
 
-$
-Z_1 = \frac{50 - 60}{12} = \frac{-10}{12} = -0.833.
-$
+$Z_1 = \frac{50 - 60}{12} = \frac{-10}{12} = -0.833$
 
 Pour $x = 75$ :
 
-$$
-Z_2 = \frac{75 - 60}{12} = \frac{15}{12} = 1.25.
-$$
+$Z_2 = \frac{75 - 60}{12} = \frac{15}{12} = 1.25$
 
 ### Étape 2 : Utilisation des tables de la loi normale  
-À l’aide des tables de la loi normale :  
+
+À l’aide des tables de la loi normale :
+
 - $P(Z \leq -0.833) \approx 0.2023$.  
 - $P(Z \leq 1.25) \approx 0.8944$.
 
 La probabilité de se trouver entre $50$ et $75$ est donnée par :
 
-$$
-P(50 \leq X \leq 75) = P(Z \leq 1.25) - P(Z \leq -0.833).
-$$
+$P(50 \leq X \leq 75) = P(Z \leq 1.25) - P(Z \leq -0.833)$
 
 En remplaçant :
 
-$$
-P(50 \leq X \leq 75) = 0.8944 - 0.2023 = 0.6921.
-$$
+$P(50 \leq X \leq 75) = 0.8944 - 0.2023 = 0.6921$
 
-### Résultat final :  
+### Résultat final
+
 La probabilité qu’un joueur obtienne un score entre $50$ et $75$ est :
 
-$$
-P \approx 0.6921 \, (69,21\%).
-$$
+$P \approx 0.6921 \, (69,21\%)$
+
 </details>
 
 ---
 
-## **Exercice 3 : Régression linéaire et coefficient de corrélation**  
-Les heures d’entraînement ($x$) et les scores obtenus ($y$) pour 5 joueurs sont données ci-dessous :  
+## **Exercice 3 : Régression linéaire et coefficient de corrélation**
+
+Les heures d’entraînement ($x$) et les scores obtenus ($y$) pour 5 joueurs sont données ci-dessous:
+
 | $x$ | 1 | 2 | 3 | 4 | 5 |  
 |------|---|---|---|---|---|  
 | $y$ | 10 | 12 | 15 | 20 | 25 |  
@@ -103,67 +99,54 @@ Les heures d’entraînement ($x$) et les scores obtenus ($y$) pour 5 joueurs so
 <details>
 <summary>Solution</summary>
 
-### Étape 1 : Calcul des moyennes  
+### Étape 1 : Calcul des moyennes
+
 Pour $x$ :  
-$$
-\bar{x} = 3.
-$$
+$\bar{x} = 3$
 
 Pour $y$ :  
-$$
-\bar{y} = 16.4.
-$$
+$\bar{y} = 16.4$
 
 ---
 
-### Étape 2 : Calcul de la pente ($a$)  
-$$
-a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}.
-$$
+### Étape 2 : Calcul de la pente ($a$)
+
+$a = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$
 
 Numérateur :
-$$
-\sum (x_i - \bar{x})(y_i - \bar{y}) = 38.
-$$
+
+$\sum (x_i - \bar{x})(y_i - \bar{y}) = 38$
 
 Dénominateur :
-$$
-\sum (x_i - \bar{x})^2 = 10.
-$$
+
+$\sum (x_i - \bar{x})^2 = 10$
 
 Pente :
-$$
-a = \frac{38}{10} = 3.8.
-$$
+
+$a = \frac{38}{10} = 3.8$
 
 ---
 
-### Étape 3 : Calcul de l’ordonnée à l’origine ($b$)  
-$$
-b = \bar{y} - a\bar{x} = 16.4 - 3.8 \cdot 3 = 5.
-$$
+### Étape 3 : Calcul de l’ordonnée à l’origine ($b$)
+
+$b = \bar{y} - a\bar{x} = 16.4 - 3.8 \cdot 3 = 5$
 
 L’équation de la droite est donc :
-$$
-y = 3.8x + 5.
-$$
+
+$y = 3.8x + 5$
 
 ---
 
-### Étape 4 : Calcul du coefficient de corrélation ($r$)  
-$$
-r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \cdot \sum (y_i - \bar{y})^2}}.
-$$
+### Étape 4 : Calcul du coefficient de corrélation ($r$)
 
-$$
-\sum (y_i - \bar{y})^2 = 149.2.
-$$
+$r = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sqrt{\sum (x_i - \bar{x})^2 \cdot \sum (y_i - \bar{y})^2}}$
 
-$$
-r = \frac{38}{\sqrt{10 \cdot 149.2}} = \frac{38}{38.64} \approx 0.984.
-$$
+$\sum (y_i - \bar{y})^2 = 149.2$
 
-### Résultat final :  
+$r = \frac{38}{\sqrt{10 \cdot 149.2}} = \frac{38}{38.64} \approx 0.984$
+
+### Résultat final
+
 1. L’équation de la droite est $y = 3.8x + 5$.  
 2. Le coefficient de corrélation est $r = 0.984$, indiquant une forte corrélation positive.
 
@@ -171,7 +154,8 @@ $$
 
 ---
 
-## **Exercice 4 : Loi normale (4 points)**  
+## **Exercice 4 : Loi normale (4 points)**
+
 Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne de $ \mu = 75 $ et un écart-type de $ \sigma = 10 $.
 
 1. Quelle est la probabilité qu’un joueur obtienne un score supérieur à $85$ ?  
@@ -184,69 +168,58 @@ Dans un tournoi, les scores des joueurs suivent une loi normale avec une moyenne
 
 ### Question 1 : Probabilité $P(X > 85)$
 
-#### Étape 1 : Transformation en $Z$-score  
+#### Étape 1 : Transformation en $Z$-score
+
 Pour transformer $X = 85$ en un $Z$-score, nous utilisons la formule :  
 
-$$
-Z = \frac{X - \mu}{\sigma}.
-$$
+$Z = \frac{X - \mu}{\sigma}$
 
 Pour $X = 85$ :
 
-$$
-Z = \frac{85 - 75}{10} = \frac{10}{10} = 1.
-$$
+$Z = \frac{85 - 75}{10} = \frac{10}{10} = 1$
 
-#### Étape 2 : Utilisation des tables de la loi normale  
+#### Étape 2 : Utilisation des tables de la loi normale
+
 À l’aide des tables de la loi normale, nous trouvons :
 
-$$
-P(Z \leq 1) \approx 0.8413.
-$$
+$P(Z \leq 1) \approx 0.8413$
 
 La probabilité que $X > 85$ est le complémentaire :
 
-$$
-P(X > 85) = 1 - P(Z \leq 1) = 1 - 0.8413 = 0.1587.
-$$
+$P(X > 85) = 1 - P(Z \leq 1) = 1 - 0.8413 = 0.1587$
 
-**Réponse 1 :** $P(X > 85) \approx 15.87 \%.$
+**Réponse 1 :** $P(X > 85) \approx 15.87 \%$
 
 ---
 
 ### Question 2 : Probabilité $P(70 \leq X \leq 90)$
 
-#### Étape 1 : Transformation en $Z$-scores  
+#### Étape 1 : Transformation en $Z$-scores
+
 Pour $X = 70$ :
 
-$$
-Z_1 = \frac{70 - 75}{10} = \frac{-5}{10} = -0.5.
-$$
+$Z_1 = \frac{70 - 75}{10} = \frac{-5}{10} = -0.5$
 
 Pour $X = 90$ :
 
-$$
-Z_2 = \frac{90 - 75}{10} = \frac{15}{10} = 1.5.
-$$
+$Z_2 = \frac{90 - 75}{10} = \frac{15}{10} = 1.5$
 
-#### Étape 2 : Utilisation des tables de la loi normale  
-D’après les tables de la loi normale :  
+#### Étape 2 : Utilisation des tables de la loi normale
+
+D’après les tables de la loi normale :
+
 - $P(Z \leq -0.5) \approx 0.3085$.  
 - $P(Z \leq 1.5) \approx 0.9332$.
 
 La probabilité cherchée est la différence :
 
-$$
-P(70 \leq X \leq 90) = P(Z \leq 1.5) - P(Z \leq -0.5).
-$$
+$P(70 \leq X \leq 90) = P(Z \leq 1.5) - P(Z \leq -0.5)$
 
 En remplaçant :
 
-$$
-P(70 \leq X \leq 90) = 0.9332 - 0.3085 = 0.6247.
-$$
+$P(70 \leq X \leq 90) = 0.9332 - 0.3085 = 0.6247$
 
-**Réponse 2 :** $P(70 \leq X \leq 90) \approx 62.47 \%.$
+**Réponse 2 :** $P(70 \leq X \leq 90) \approx 62.47 \%$
 
 </details>
 
