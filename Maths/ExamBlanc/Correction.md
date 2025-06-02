@@ -60,7 +60,7 @@ Scores : \( 12, 15, 20, 25, 30, 35, 50 \).
      \( \sigma = \sqrt{\frac{\sum (x_i - \bar{x})^2}{n}} \), avec \( \bar{x} = 26,71 \).  
      \( \sigma \approx 12,90 \).  
 
-     **Réponse : Moyenne = \( 26,71 \), Médiane = \( 25 \), Écart-type = \( 12,90 \)**  
+     **Réponse : Moyenne = \( 26,71 \), Médiane = \( 25 \), Écart-type = \( 12,09 \)**  
 
 2. **Détection des outliers (méthode IQR) :**  
    - \( Q1 = 20 \), \( Q3 = 35 \), \( IQR = Q3 - Q1 = 15 \).  
